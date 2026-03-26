@@ -17,7 +17,11 @@ const stepData = [
     imageUrl: null,
   },
   {
-    heading: "PINCH",
+    logo: {
+      src: '/images/pinch-logo.png',
+      alt: "Pinch Recipe Management App",
+      variant: "above-heading"
+    },
     paragraph: `A recipe management application built with Angular 20, TypeScript, and Firebase. Features secure authentication, real-time Firestore database, and advanced search functionality. Applies reactive forms, RxJS, and component architecture while maintaining a mobile-first design optimized for kitchen workflow efficiency.`,
     links: [
       { primary: true, label: "DEMO", href: 'https://pinchthis.com/demo' }
@@ -38,6 +42,12 @@ const stepData = [
     darkmode: false,
     imageUrl: null,
   },
+  {
+    heading: 'Thank you!',
+    background: '#f1f1f1',
+    darkmode: false,
+    imageUrl: null,
+  }
 ];
 
 export const Home = () => {
