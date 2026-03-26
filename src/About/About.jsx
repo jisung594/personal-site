@@ -4,53 +4,48 @@ export const About = ({ ...props }) => {
   return (
     <div className={`${styles.about} ${styles.fullHeight}`}>
       <div className={styles.generalInfo}>
-        <h1 className={styles.generalTitle}>General</h1>
+        <h1 className={styles.generalTitle}>About</h1>
+        <p className={styles.bio}>
+          Software engineer focused on building efficient, maintainable frontend systems. 
+          I bridge design and engineering to create performant interfaces that deliver intuitive user experiences.
+        </p>
         <div className={styles.location}>
-          <p>Location:
-            <span>Chicago, IL</span>
-          </p>
-        </div>
-        <div className={styles.preferences}>
-          <p>Open to:
-            <span>Remote, Hybrid</span>
-            <span>Full-time, Part-time, Freelance</span>
-          </p>
+          <p>Based in <strong>Chicago, IL</strong></p>
+          <p>Open to <strong>remote + hybrid</strong> opportunities</p>
         </div>
       </div>
 
       <div className={styles.experience}>
-        <h1 className={styles.experienceTitle}>Professional Experience</h1>
-        <ul className={styles.experienceList}>
-          <div className={styles.experienceListCol}>
-            <li>React</li>
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
+        <h1 className={styles.experienceTitle}>Technical Skills</h1>
+        <div className={styles.skillsGrid}>
+          <div className={styles.skillsCategory}>
+            <h3>CORE</h3>
+            <ul>
+              <li>React</li>
+              <li>JavaScript/TypeScript</li>
+              <li>HTML/CSS</li>
+              <li>Angular</li>
+              <li>Tailwind CSS</li>
+            </ul>
           </div>
-          <div className={styles.experienceListCol}>
-            <li>Drupal</li>
-            <li>PHP</li>
-            <li>Twig</li>
+          <div className={styles.skillsCategory}>
+            <h3>CMS & BACKEND</h3>
+            <ul>
+              <li>Drupal</li>
+              <li>PHP</li>
+              <li>Twig</li>
+              <li>Firebase</li>
+            </ul>
           </div>
-          <div className={styles.experienceListCol}>
-            <li>Behat</li>
-            <li>Cypress</li>
+          <div className={styles.skillsCategory}>
+            <h3>TESTING</h3>
+            <ul>
+              <li>Behat</li>
+              <li>Cypress</li>
+              <li>Storybook</li>
+            </ul>
           </div>
-          <div className={styles.experienceListCol}>
-            <li>Figma</li>
-            <li>Storybook</li>
-          </div>
-        </ul>
-      </div>
-      <div className={styles.tools}>
-        <h1 className={styles.toolsTitle}>Current Tools</h1>
-        <ul className={styles.toolsList}>
-          <div className={styles.experienceListCol}>
-            <li>Angular</li>
-            <li>Typescript</li>
-            <li>Tailwind CSS</li>
-            <li>Firebase</li>
-          </div>
-        </ul>
+        </div>
       </div>
     </div>
   )

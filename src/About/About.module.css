@@ -1,52 +1,45 @@
-.about {
-  margin-top: 4rem;
-  padding: var(--space-2xl);
-}
+.about {}
+ 
 
 .fullHeight {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: var(--space-xl);
+  /* justify-content: center; */
   box-sizing: border-box;
   background-color: var(--color-background);
+  padding: var(--space-6xl) var(--space-2xl);
 }
 
 .generalInfo {
   font-family: var(--font-body);
   font-size: var(--text-xl);
-
   display: flex;
   flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-4xl);
 }
 
-.location {
-  margin-bottom: var(--space-lg);
-}
-
-.location, .preferences {
-  display: flex;
-  flex-direction: row;
-}
-
-.location p, .preferences p {
-  font-size: var(--text-md);
-  font-weight: var(--font-light);
-
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
+.bio {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.6;
   margin: 0;
 }
 
-.location span, .preferences span {
+.location {
   display: flex;
-  font-size: var(--text-lg);
-  font-weight: var(--font-normal);
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
-.generalTitle, .experienceTitle, .toolsTitle {
+.location p {
+  font-size: var(--text-lg);
+  font-weight: var(--font-normal);
+  margin: 0;
+}
+
+.generalTitle, .experienceTitle {
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
   font-weight: var(--font-normal);
@@ -55,34 +48,48 @@
   margin-bottom: var(--space-lg);
 }
 
-.experienceList {
+.skillsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.skillsCategory {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
 }
 
-.experienceList, .toolsList {
+.skillsCategory h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.skillsCategory ul {
   list-style-type: none;
   font-family: var(--font-body);
   font-size: var(--text-lg);
   margin: 0;
   padding: 0;
-}
-
-.experienceListCol {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-sm)
 }
 
 /* Desktop styles */
 @media (min-width: 769px) {
-  .about {
-    padding: var(--space-2xl) var(--space-6xl);
+  .fullHeight {
+    padding: var(--space-6xl);
   }
 
-  .experienceList {
+  .skillsGrid {
     flex-direction: row;
     gap: var(--space-4xl);
+  }
+
+  .skillsCategory {
+    flex: 1;
   }
 }
