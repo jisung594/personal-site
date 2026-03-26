@@ -1,36 +1,26 @@
 import { ScrollytellingStory } from '../ScrollytellingStory/ScrollytellingStory';
-import styles from './Home.module.css';
 
 const stepData = [
   {
-    heading: 'Hi! My name is Jon.',
-    paragraph: `I'm a frontend developer focused on translating design into real, usable software. 
-      I value patience and attention to detail, and I'm drawn to building interfaces that feel 
-      intuitive and human.`,
+    heading: 'JONATHAN CHOI',
+    paragraph: `Software engineer who bridges design and engineering to build efficient, maintainable systems. 
+      I optimize performance and craft clean interfaces that deliver intuitive user experiences.`,
     background: '#f1f1f1',
     darkmode: false,
     imageUrl: null,
   },
   {
-    caption: `*Just an fyi -- due to my previous role supporting public sector clients over the last four years, 
-      much of my work resides in internal company codebases and remains confidential. Nonetheless, please feel free to browse
-      some of my recent projects below:`,
+    caption: `I believe in continuous learning and working across different tech stacks. Here are some recent projects:`,
     paragraph: '',
     background: '#f1f1f1',
     darkmode: false,
     imageUrl: null,
   },
   {
-    heading: "Baker's Logbook",
-    paragraph: `A personal recipe-tracking application built to support 
-      iteration, organization, and refinement over time. After working professionally with React
-      for the past couple of years, I chose Angular and Tailwind CSS for this project to 
-      step outside my comfort zone and explore a different frontend ecosystem. Most importantly, 
-      it's a practical tool that I genuinely intend to use in my day-to-day life. Features are 
-      implemented based on my own needs as a home baker, with an emphasis on the simplicity of 
-      a traditional manual logbook.`,
+    heading: "Pinch",
+    paragraph: `A recipe management application built with Angular 20, TypeScript, and Firebase. Features secure authentication, real-time Firestore database, and advanced search functionality. Applies reactive forms, RxJS, and component architecture while maintaining a mobile-first design optimized for kitchen workflow efficiency.`,
     links: [
-      { primary: true, label: "BAKER'S LOGBOOK", href: 'https://bakers-logbook.web.app/' }
+      { primary: true, label: "Pinch", href: 'https://pinchthis.com/demo' }
     ],
     background: '#f1f1f1',
     darkmode: false,

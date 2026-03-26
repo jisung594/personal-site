@@ -1,0 +1,36 @@
+.liquidMorphText {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  margin: 0;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  
+  /* Initial state - blurred and distorted */
+  filter: blur(8px) contrast(2) brightness(1.5);
+  transform: scale(1.1) skewX(-5deg);
+  opacity: 0.3;
+  
+  /* Liquid morph animation */
+  transition: all 2.5s cubic-bezier(0.23, 1, 0.32, 1);
+  
+  /* Subtle text shadow for depth */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.liquidMorphText.morphed {
+  /* Final state - clear and sharp */
+  filter: blur(0) contrast(1) brightness(1);
+  transform: scale(1) skewX(0deg);
+  opacity: 1;
+  
+  /* Refined text shadow */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .liquidMorphText {
+    font-size: var(--text-3xl);
+  }
+}
