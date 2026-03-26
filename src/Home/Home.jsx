@@ -32,7 +32,7 @@ const stepData = [
     links: [
       { primary: true, label: 'DEMO', href: '/mini-ui-kit' },
       { primary: false, label: 'FIGMA', href: 'https://www.figma.com/design/iUEUiDkx3jtnYPtJyTNjjE/Mini-Component-Library?node-id=490-189' },
-      { primary: false, label: 'STORYBOOK', href: 'https://www.storybook.com/example' }
+      { primary: false, label: 'STORYBOOK', href: 'https://jisungchoi.com/storybook' }
     ],
     background: '#f1f1f1',
     darkmode: false,
