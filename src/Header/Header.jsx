@@ -13,9 +13,7 @@ export const Header = () => {
     setMenuOpen(false);
   }, [location.pathname]); // Close menu on route change
 
-  const headerShadowClass = location.pathname === '/2025' 
-    ? styles.headerDarkShadow
-    : styles.headerLightShadow;
+  const headerShadowClass = styles.headerLightShadow;
 
   return (
     <div className={`${styles.header} ${headerShadowClass}`}>
@@ -29,7 +27,6 @@ export const Header = () => {
       <nav className={styles.navDesktop}>
         <NavLink to="/" className={styles.navLink}>HOME</NavLink>
         <NavLink to="/about" className={styles.navLink}>ABOUT</NavLink>
-        <NavLink to="/2025" className={styles.navLink}>2025</NavLink>
       </nav>
       <button 
         className={styles.menuButton} 
@@ -45,7 +42,6 @@ export const Header = () => {
           <nav className={styles.navMobile}>
             <NavLink to="/" className={styles.navLink}>HOME</NavLink>
             <NavLink to="/about" className={styles.navLink}>ABOUT</NavLink>
-            <NavLink to="/2025" className={styles.navLink}>2025</NavLink>
           </nav>
         </div>
     </div>
