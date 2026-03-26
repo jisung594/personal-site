@@ -25,13 +25,15 @@ export const ScrollytellingStory = ({ storySteps }) => {
       {/* Holds fixed background images. */}
       <div className={styles.imageBackgroundContainer}>
         {storySteps.map((data, i) => (
-          <img
-            key={i}
-            src={data.imageUrl || ''} // Use an empty string if no image URL is provided
-            alt={data.title || ''}
-            className={`${styles.scrollytellingImageFixed} ${currentStep === i && data.imageUrl ? styles.scrollytellingImageActive : ''}`}
-            onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/1920x1080/d7c4b0/000000?text=Error"; }}
-          />
+          data.imageUrl && (
+            <img
+              key={i}
+              src={data.imageUrl}
+              alt={data.title || ''}
+              className={`${styles.scrollytellingImageFixed} ${currentStep === i ? styles.scrollytellingImageActive : ''}`}
+              onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/1920x1080/d7c4b0/000000?text=Error"; }}
+            />
+          )
         ))}
       </div>
 
