@@ -40,7 +40,7 @@ export const ScrollytellingStory = ({ storySteps }) => {
       <div className={styles.storyTextSections}>
         <Scrollama
           onStepEnter={onStepEnter}
-          offset={0.1} // Triggers when step is at 10% of the viewport height
+          offset={0.5} // Triggers when step is at 50% of the viewport height
         >
           {storySteps.map((data, i) => (
             <Step key={i} data={i}>
@@ -56,13 +56,7 @@ export const ScrollytellingStory = ({ storySteps }) => {
                   ${data.links && styles.projectLinkStep}
                   ${styles.textContent}
                 `}>
-                  {data.heading && (
-                    i === 0 ? (
-                      <LiquidMorphText text={data.heading} delay={500} />
-                    ) : (
-                      <h1>{data.heading}</h1>
-                    )
-                  )}
+                  {data.heading && <LiquidMorphText text={data.heading} delay={200} isActive={currentStep === i} />}
                   {data.caption && <span>{data.caption}</span>}
                   {data.paragraph && <p>{data.paragraph}</p>}
                   {
