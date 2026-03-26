@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from './LiquidMorphText.module.css';
 
-export const LiquidMorphText = ({ text, delay = 0, isActive = false }) => {
+export const LiquidMorphText = ({ text, delay = 0, isActive = false, isButton = false, primary = false, href = '#' }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const hasAnimated = useRef(false);
 
@@ -16,10 +16,17 @@ export const LiquidMorphText = ({ text, delay = 0, isActive = false }) => {
     }
   }, [isActive, delay]);
 
+  const Tag = isButton ? 'a' : 'h1';
+  const className = isButton 
+    ? `${styles.liquidMorphText} ${styles.button} ${primary ? styles.primary : styles.secondary} ${isAnimating ? styles.morphed : ''}`
+    : `${styles.liquidMorphText} ${isAnimating ? styles.morphed : ''}`;
+
+  const props = isButton ? { href, className } : { className };
+
   return (
-    <h1 className={`${styles.liquidMorphText} ${isAnimating ? styles.morphed : ''}`}>
+    <Tag {...props}>
       {text}
-    </h1>
+    </Tag>
   );
 };
 
