@@ -27,13 +27,10 @@ export const ScrollytellingStory = ({ storySteps }) => {
         {storySteps.map((data, i) => (
           <img
             key={i}
-            src={data.imageUrl || null} // Use an empty string if no image URL is provided
+            src={data.imageUrl || ''} // Use an empty string if no image URL is provided
             alt={data.title || ''}
             className={`${styles.scrollytellingImageFixed} ${currentStep === i && data.imageUrl ? styles.scrollytellingImageActive : ''}`}
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = 'https://placehold.co/1920x1080/d7c4b0/000000?text=Error';
-            }}
+            onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/1920x1080/d7c4b0/000000?text=Error"; }}
           />
         ))}
       </div>
