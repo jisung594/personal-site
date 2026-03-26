@@ -77,7 +77,7 @@
 }
 
 .activeDot {
-  background-color: #1591EA;
+  background-color: var(--color-primary);
 }
 
 .textContent {
