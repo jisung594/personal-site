@@ -1,0 +1,81 @@
+.storybook-button {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid var(--color-primary);
+  width: -webkit-fit-content;
+  width: fit-content;
+  max-width: 50%;
+  min-width: 120px;
+  box-sizing: border-box;
+  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1),
+              border-color 0.8s ease-out;
+  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1),
+              border-color var(--transition-slow, 0.8s) var(--ease-out, ease-out);
+  
+  /* Initial button state - add liquid morph properties */
+  filter: blur(4px) contrast(1.5) brightness(1.2);
+  transform: scale(0.95) translateY(10px);
+  opacity: 0.4;
+}
+
+.storybook-button--primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.storybook-button--secondary {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+/* Liquid morph animation state */
+.storybook-button.morphed {
+  /* Final button state */
+  filter: blur(0) contrast(1) brightness(1);
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Hover effects using design system */
+.storybook-button:hover {
+  transition: 0.8s ease-out;
+  transition: var(--transition-slow, 0.8s) var(--ease-out, ease-out);
+}
+
+.storybook-button--primary:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.storybook-button--secondary:hover {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  border-color: var(--color-secondary);
+}
+
+/* Size variants */
+.storybook-button--small {
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--text-sm);
+}
+
+.storybook-button--medium {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--text-lg);
+}
+
+.storybook-button--large {
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--text-xl);
+}
+
+
+/*# sourceMappingURL=stories-Button-stories.26792935.chunk.css.map*/

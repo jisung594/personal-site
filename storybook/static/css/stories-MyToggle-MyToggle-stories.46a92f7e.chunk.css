@@ -1,0 +1,132 @@
+/* Base styles for the entire toggle wrapper (label for accessibility) */
+.MyToggle_toggleWrapper__Sn1mR {
+  display: inline-block;
+  position: relative;
+  width: 104px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+          user-select: none;
+  font-family: 'Gilroy', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Hidden native checkbox for accessibility */
+.MyToggle_toggleInput__hyElt {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.MyToggle_toggleContainer__yG1-K {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #000000;
+  background-color: #FFFFFF;
+  transition: border-color 0.15s ease-out, background-color 0.15s ease-out;
+  box-sizing: border-box;
+}
+
+.MyToggle_toggleTrack__SGM8a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.MyToggle_toggleThumb__mNAgF {
+  position: absolute;
+  width: calc(50% + 2px);
+  height: 100%;
+  background-color: #EBEBEB;
+  left: 0;
+  transition: left 0.2s ease-out, background-color 0.2s ease-out;
+  box-sizing: border-box;
+}
+
+.MyToggle_toggleThumbOn__rqol8 {
+  left: calc(50% - 2px);
+  background-color: #FF9900;
+}
+
+.MyToggle_toggleLabelText__o2zxe {
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  left: 0;
+  transition: color 0.2s ease-out;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.MyToggle_toggleLabelTextOn__LA3rp {
+  color: #FFFFFF;
+  left: 50%;
+}
+
+
+/* --- STATES --- */
+
+/* Focus state for the toggle (when the hidden input is focused) */
+.MyToggle_toggleInput__hyElt:focus + .MyToggle_toggleContainer__yG1-K {
+  outline: none;
+  border-color: #006391;
+}
+
+.MyToggle_toggleInput__hyElt:focus + .MyToggle_toggleContainer__yG1-K .MyToggle_toggleLabelText__o2zxe {
+  color: #006391;
+}
+
+.MyToggle_toggleWrapper__Sn1mR:hover .MyToggle_toggleContainer__yG1-K {
+  border-color: #4FB6E5;
+}
+
+.MyToggle_toggleWrapper__Sn1mR:hover .MyToggle_toggleLabelText__o2zxe {
+  color: #000000;
+}
+
+.MyToggle_toggleWrapper__Sn1mR:hover .MyToggle_toggleThumb__mNAgF {
+  transform: translateX(4px);
+}
+
+.MyToggle_toggleWrapper__Sn1mR:hover .MyToggle_toggleLabelText__o2zxe {
+  color: #000000;
+  transform: translateX(4px);
+}
+
+.MyToggle_toggleInput__hyElt:checked + .MyToggle_toggleContainer__yG1-K:hover .MyToggle_toggleThumb__mNAgF {
+  transform: translateX(-4px);
+}
+
+.MyToggle_toggleInput__hyElt:checked + .MyToggle_toggleContainer__yG1-K:hover .MyToggle_toggleLabelText__o2zxe {
+  color: #FFFFFF;
+  transform: translateX(-4px);
+}
+
+.MyToggle_toggleInput__hyElt:checked + .MyToggle_toggleContainer__yG1-K {
+  background-color: #EBEBEB;
+  border-color: #FF9900;
+}
+
+.MyToggle_toggleInput__hyElt:checked + .MyToggle_toggleContainer__yG1-K .MyToggle_toggleLabelText__o2zxe {
+  color: #FFFFFF;
+}
+
+
+/*# sourceMappingURL=stories-MyToggle-MyToggle-stories.46a92f7e.chunk.css.map*/

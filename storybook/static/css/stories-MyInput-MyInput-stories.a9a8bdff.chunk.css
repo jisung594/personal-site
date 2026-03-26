@@ -1,0 +1,61 @@
+.MyInput_inputWrapper__vnLWi {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 240px;
+  font-family: 'Gilroy', sans-serif;
+}
+
+.MyInput_label__tceMk {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.15s ease-out;
+}
+
+.MyInput_inputField__Q8Mck {
+  height: 40px;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 24px;
+  border: 2px solid #000000;
+  background-color: transparent;
+  color: #000000;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+.MyInput_inputField__Q8Mck::placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+.MyInput_inputField__Q8Mck:hover {
+  border-color: #4FB6E5;
+}
+
+.MyInput_inputWrapper__vnLWi:hover .MyInput_label__tceMk {
+  color: #4FB6E5;
+}
+
+.MyInput_inputField__Q8Mck:focus {
+  outline: none;
+  border-color: #006391;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.MyInput_inputField__Q8Mck:focus + .MyInput_label__tceMk,
+.MyInput_inputWrapper__vnLWi:focus-within .MyInput_label__tceMk {
+  color: #006391;
+}
+
+/* TODO: adjust JSX to put label after input for + selector / use JS for full control */
+/* TODO: make sure label color changes when the input is focused */
+/* (:focus-within on the wrapper is CSS-only / not all browsers fully support :focus-within) */
+
+
+/*# sourceMappingURL=stories-MyInput-MyInput-stories.a9a8bdff.chunk.css.map*/

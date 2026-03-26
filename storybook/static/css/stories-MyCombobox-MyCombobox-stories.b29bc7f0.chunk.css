@@ -1,0 +1,206 @@
+/* Base styles for the combobox wrapper */
+.MyCombobox_comboboxWrapper__eZif6 {
+    font-family: 'Gilroy', sans-serif;
+    width: 280px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.MyCombobox_label__4Ekra {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.15s ease-out;
+}
+
+.MyCombobox_inputContainer__13182 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #000000;
+    height: 40px;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease-out;
+}
+
+/* Combobox Input Field (main display area) */
+.MyCombobox_comboboxInput__Fvo6h {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    flex-grow: 1; /* Takes up available space */
+    padding: 8px 12px;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.MyCombobox_comboboxInput__Fvo6h::placeholder {
+    font-weight: 400;
+    color: #999999;
+    opacity: 1;
+}
+
+/* Styling for input when an option is selected */
+.MyCombobox_comboboxInputSelected__mZXHl {
+    background-color: #4D4D4D;
+    color: #FFFFFF;
+}
+
+/* Clear button (x icon) */
+.MyCombobox_clearButton__dV0Sc {
+    /* background: none; */
+    border: none;
+    color: #FFFFFF;
+    background-color: #4D4D4D;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease-out;
+    margin-left: -1px;
+
+}
+
+/* Clear button hover/focus state */
+.MyCombobox_clearButton__dV0Sc:hover,
+.MyCombobox_clearButton__dV0Sc:focus {
+    color: #006391;
+    outline: none;
+}
+
+/* Dropdown toggle button (arrow icon) */
+.MyCombobox_dropdownButton__xajGq {
+    background-color: #4FB6E5;
+    border: none;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.15s ease-out;
+}
+
+.MyCombobox_dropdownArrow__xyMML {
+    color: #000000;
+    font-size: 12px;
+    line-height: 1;
+    transition: transform 0.2s ease-out, color 0.15s ease-out;
+}
+
+/* Rotates arrow when dropdown is open */
+.MyCombobox_dropdownButtonOpen__xBA9G .MyCombobox_dropdownArrow__xyMML {
+    transform: rotate(180deg);
+}
+
+.MyCombobox_helpText__j-t5P {
+    font-size: 12px;
+    color: #000000;
+    margin-top: 4px;
+}
+
+.MyCombobox_dropdownList__nkS3d {
+    position: absolute;
+    top: calc(100% - 2px); /* Position below the input field, accounting for border */
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #4D4D4D;
+    border: 2px solid #000000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Custom scrollbar for Webkit browsers */
+.MyCombobox_dropdownList__nkS3d::-webkit-scrollbar {
+    width: 8px;
+}
+
+.MyCombobox_dropdownList__nkS3d::-webkit-scrollbar-track {
+    background: #FFFFFF;
+}
+
+.MyCombobox_dropdownList__nkS3d::-webkit-scrollbar-thumb {
+    background-color: #4FB6E5;
+    /* border: 2px solid transparent; */
+    border: 0 solid transparent;
+    background-clip: padding-box;
+}
+
+/* Dropdown options */
+.MyCombobox_dropdownOption__fJHrZ {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-bottom: 1px solid #000000; /* Separator between options */
+    transition: background-color 0.15s ease-out, color 0.15s ease-out;
+}
+
+.MyCombobox_dropdownOption__fJHrZ:last-child {
+    border-bottom: none; /* No border for the last option */
+}
+
+.MyCombobox_dropdownOption__fJHrZ:hover,
+.MyCombobox_dropdownOptionFocused__yZ3b4 {
+    background-color: #FFFFFF;
+    color: #4FB6E5; 
+}
+
+
+/* --- INTERACTIVE STATES FOR THE MAIN COMBOBOX INPUT --- */
+
+.MyCombobox_inputContainer__13182:hover {
+    border-color: #4FB6E5;
+}
+
+.MyCombobox_comboboxWrapper__eZif6:hover .MyCombobox_label__4Ekra {
+    color: #4FB6E5;
+}
+
+.MyCombobox_dropdownButton__xajGq:hover {
+    background-color: #006391;
+}
+
+.MyCombobox_dropdownButton__xajGq:hover .MyCombobox_dropdownArrow__xyMML {
+    color: #FFFFFF;
+}
+
+.MyCombobox_comboboxInput__Fvo6h:focus-within,
+.MyCombobox_comboboxInput__Fvo6h:focus {
+    border-color: #006391;
+}
+
+.MyCombobox_comboboxWrapper__eZif6:focus-within .MyCombobox_label__4Ekra {
+    color: #006391;
+}
+
+.MyCombobox_comboboxInput__Fvo6h:focus + .MyCombobox_clearButton__dV0Sc + .MyCombobox_dropdownButton__xajGq,
+.MyCombobox_comboboxInput__Fvo6h:focus + .MyCombobox_dropdownButton__xajGq,
+.MyCombobox_dropdownButton__xajGq:focus {
+    background-color: #006391;
+}
+
+.MyCombobox_comboboxInput__Fvo6h:focus + .MyCombobox_clearButton__dV0Sc + .MyCombobox_dropdownButton__xajGq .MyCombobox_dropdownArrow__xyMML,
+.MyCombobox_comboboxInput__Fvo6h:focus + .MyCombobox_dropdownButton__xajGq .MyCombobox_dropdownArrow__xyMML,
+.MyCombobox_dropdownButton__xajGq:focus .MyCombobox_dropdownArrow__xyMML {
+    color: #FFFFFF;
+}
+
+/*# sourceMappingURL=stories-MyCombobox-MyCombobox-stories.b29bc7f0.chunk.css.map*/
