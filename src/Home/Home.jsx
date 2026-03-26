@@ -10,7 +10,7 @@ const stepData = [
     imageUrl: null,
   },
   {
-    caption: `I believe in continuous learning and working across different tech stacks. Here are some recent projects:`,
+    caption: `I work across different development ecosystems, adapting to each project's needs. Recent projects include:`,
     paragraph: '',
     background: '#f1f1f1',
     darkmode: false,
