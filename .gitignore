@@ -10,6 +10,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -24,3 +25,29 @@ yarn-error.log*
 
 *storybook.log
 storybook-static
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Logs
+logs
+*.log
+
+# Temporary folders
+tmp/
+temp/
+
+# OS generated files
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
