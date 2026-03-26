@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './MiniUiKit.module.css';
-import { MyButton } from '../stories/MyButton/MyButton.jsx';
+import { Button } from '../stories/Button';
 import { MyInput } from '../stories/MyInput/MyInput.jsx';
 import { MyToggle } from '../stories/MyToggle/MyToggle.jsx';
 import { MyCombobox } from '../stories/MyCombobox/MyCombobox.jsx';
@@ -79,9 +79,8 @@ export const MiniUiKit = ({ ...props }) => {
       <div ref={sectionRefs.buttons} data-section="buttons" className={getSectionClass('buttons')}>
         <h2 className={styles.sectionTitle}>Buttons</h2>
         <div className={styles.buttonsContainer}>
-            <MyButton primary={false} label={'CANCEL'} onClick={() => handleButtonClick('Primary')} />
-            {/* <MyButton primary={true} label={'LONG TEXT BUTTON'} onClick={() => handleButtonClick('Primary')} /> */}
-          <MyButton primary={true} label={'PUBLISH'} onClick={() => handleButtonClick('Secondary')} />
+          <Button href="#" onClick={() => handleButtonClick('CANCEL')}>CANCEL</Button>
+          <Button primary href="#" onClick={() => handleButtonClick('PUBLISH')}>PUBLISH</Button>
         </div>
       </div>
 

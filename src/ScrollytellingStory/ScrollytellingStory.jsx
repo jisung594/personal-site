@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
-import { LiquidMorphText } from '../LiquidMorphText/LiquidMorphText';
+import { Button } from '../stories/Button';
 import styles from './ScrollytellingStory.module.css';
 
 export const ScrollytellingStory = ({ storySteps }) => {
@@ -62,15 +62,13 @@ export const ScrollytellingStory = ({ storySteps }) => {
                     data.links && (
                       <div className={styles.buttonContainer}>
                         {data.links.map((buttonItem, index) => (
-                          <LiquidMorphText 
+                          <Button 
                             key={index} 
-                            text={buttonItem.label}
-                            delay={400 + (index * 100)}
-                            isActive={currentStep === i}
-                            isButton={true}
                             primary={buttonItem.primary}
                             href={buttonItem.href}
-                          />
+                          >
+                            {buttonItem.label}
+                          </Button>
                         ))}
                       </div>
                     )

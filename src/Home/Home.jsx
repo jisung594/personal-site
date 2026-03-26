@@ -28,9 +28,7 @@ const stepData = [
   },
   {
     heading: 'Mini UI Kit',
-    paragraph: `A small component library I designed and built to experiment with 
-      combining my skill sets in frontend development and graphic design. Components were designed 
-      in Figma and implemented in React, with Storybook used as a dev / documentation environment.`,
+    paragraph: `An exploration of component design and implementation, blending frontend development with visual design. Created as a practical study of modern component architecture, with components designed in Figma and implemented in React. Storybook serves as the development and documentation environment for this experimental component library.`,
     links: [
       { primary: true, label: 'DEMO', href: '/mini-ui-kit' },
       { primary: false, label: 'FIGMA', href: 'https://www.figma.com/design/iUEUiDkx3jtnYPtJyTNjjE/Mini-Component-Library?node-id=490-189' },
