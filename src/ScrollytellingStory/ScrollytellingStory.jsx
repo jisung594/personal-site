@@ -66,6 +66,8 @@ export const ScrollytellingStory = ({ storySteps }) => {
                             key={index} 
                             primary={buttonItem.primary}
                             href={buttonItem.href}
+                            isActive={currentStep === i}
+                            delay={400 + (index * 100)}
                           >
                             {buttonItem.label}
                           </Button>
