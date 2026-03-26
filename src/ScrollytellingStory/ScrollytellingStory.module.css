@@ -142,9 +142,24 @@
 
 /* Overrides for textContent wrapper when links present */
 .projectLinkStep {
-  /* flex-direction: row; */
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   gap: 20px;
+}
+
+/* Button container for single row layout */
+.projectLinkStep .liquidMorphText.button {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* Create a flex container just for buttons */
+.projectLinkStep .buttonContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 /* Overrides for button instances on homepage */

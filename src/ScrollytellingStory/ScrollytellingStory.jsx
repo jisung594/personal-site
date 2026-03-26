@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
-import { MyButton } from '../stories/MyButton/MyButton';
 import { LiquidMorphText } from '../LiquidMorphText/LiquidMorphText';
 import styles from './ScrollytellingStory.module.css';
 
@@ -56,22 +55,26 @@ export const ScrollytellingStory = ({ storySteps }) => {
                   ${data.links && styles.projectLinkStep}
                   ${styles.textContent}
                 `}>
-                  {data.heading && <LiquidMorphText text={data.heading} delay={200} isActive={currentStep === i} />}
+                  {data.heading && <h1>{data.heading}</h1>}
                   {data.caption && <span>{data.caption}</span>}
                   {data.paragraph && <p>{data.paragraph}</p>}
                   {
                     data.links && (
-                      data.links.map((buttonItem, index) => (
-                        <MyButton 
-                          key={index} 
-                          primary={buttonItem.primary} 
-                          label={buttonItem.label} 
-                          className={styles.projectLinkCta} 
-                          href={buttonItem.href}
-                        />
-                      ))
-                  )}
-                </div>
+                      <div className={styles.buttonContainer}>
+                        {data.links.map((buttonItem, index) => (
+                          <LiquidMorphText 
+                            key={index} 
+                            text={buttonItem.label}
+                            delay={400 + (index * 100)}
+                            isActive={currentStep === i}
+                            isButton={true}
+                            primary={buttonItem.primary}
+                            href={buttonItem.href}
+                          />
+                        ))}
+                      </div>
+                    )
+                  }</div>
               </div>
             </Step>
           ))}
