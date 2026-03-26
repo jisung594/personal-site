@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import { MyButton } from '../stories/MyButton/MyButton';
+import { LiquidMorphText } from '../LiquidMorphText/LiquidMorphText';
 import styles from './ScrollytellingStory.module.css';
 
 export const ScrollytellingStory = ({ storySteps }) => {
@@ -55,7 +56,13 @@ export const ScrollytellingStory = ({ storySteps }) => {
                   ${data.links && styles.projectLinkStep}
                   ${styles.textContent}
                 `}>
-                  {data.heading && <h1>{data.heading}</h1>}
+                  {data.heading && (
+                    i === 0 ? (
+                      <LiquidMorphText text={data.heading} delay={500} />
+                    ) : (
+                      <h1>{data.heading}</h1>
+                    )
+                  )}
                   {data.caption && <span>{data.caption}</span>}
                   {data.paragraph && <p>{data.paragraph}</p>}
                   {
