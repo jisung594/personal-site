@@ -1,37 +1,36 @@
 import PropTypes from 'prop-types';
-
 import './button.css';
 
-/** Primary UI component for user interaction */
+/** Reusable button component with liquid morph animations and WCAG-compliant design system */
 export const Button = ({
   primary = false,
-  backgroundColor = null,
   size = 'medium',
-  label,
+  href,
+  children,
   ...props
 }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  
   return (
-    <button
-      type="button"
+    <a
+      href={href}
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
       {...props}
     >
-      {label}
-    </button>
+      {children}
+    </a>
   );
 };
 
 Button.propTypes = {
   /** Is this the principal call to action on the page? */
   primary: PropTypes.bool,
-  /** What background color to use */
-  backgroundColor: PropTypes.string,
-  /** How large should the button be? */
+  /** Button size variant */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   /** Button contents */
-  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  /** Navigation destination */
+  href: PropTypes.string,
   /** Optional click handler */
   onClick: PropTypes.func,
 };
