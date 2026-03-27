@@ -19,7 +19,7 @@ export const LogoReveal = ({ logoSrc, alt = "Logo", onAnimationComplete }) => {
       if (onAnimationComplete) {
         onAnimationComplete();
       }
-    }, 3000); // Animation complete
+    }, 4000); // Animation complete
 
     return () => {
       clearTimeout(timer1);
@@ -37,7 +37,11 @@ export const LogoReveal = ({ logoSrc, alt = "Logo", onAnimationComplete }) => {
           alt={alt}
           className={styles.logo}
         />
-        <div className={`${styles.decorativeBarFill} ${showLogo ? styles.fillAnimation : ''}`} />
+        <div className={`${styles.particleContainer} ${showLogo ? styles.showParticles : ''}`}>
+          {[...Array(8)].map((_, i) => (
+            <div key={i} className={styles.particle} style={{ '--delay': `${i * 0.2}s` }} />
+          ))}
+        </div>
         <div className={`${styles.welcomeText} ${showLogo ? styles.showText : ''}`}>
           WELCOME
         </div>
