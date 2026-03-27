@@ -55,13 +55,23 @@ const AppContent = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  // Check if user has seen splash screen before
+  useEffect(() => {
+    const hasSeenSplash = localStorage.getItem('hasSeenSplash');
+    if (isHomepage && !hasSeenSplash) {
+      setShowSplash(true);
+    }
+  }, [isHomepage]);
+
   const handleSplashComplete = () => {
+    // Mark that user has seen splash screen
+    localStorage.setItem('hasSeenSplash', 'true');
     setShowSplash(false);
   };
 
   return (
     <>
-      {isHomepage && <SplashScreen onComplete={handleSplashComplete} />}
+      {isHomepage && showSplash && <SplashScreen onComplete={handleSplashComplete} />}
       <div className="App" style={{ opacity: showSplash ? 0 : 1, transition: 'opacity 2s ease-in-out' }}>
         <Header currentLocation={currentLocation} />
         <Suspense fallback={<LoadingSpinner />}>
