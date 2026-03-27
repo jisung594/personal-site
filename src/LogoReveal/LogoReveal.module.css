@@ -1,0 +1,93 @@
+.logoReveal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logoReveal.visible {
+  opacity: 1;
+}
+
+.blackScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  z-index: 2;
+  transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blackScreen.fadeOut {
+  opacity: 0;
+}
+
+.logoContainer {
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.logoContainer.emerge {
+  opacity: 1;
+}
+
+.logo {
+  max-width: 400px;
+  width: 80vw;
+  height: auto;
+  filter: drop-shadow(0 10px 10px rgba(255, 255, 255, 0.3));
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.welcomeText {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out 0.5s;
+  margin-top: 20px;
+}
+
+.welcomeText.showText {
+  opacity: 1;
+}
+
+.decorativeBarFill {
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
+  margin: 20px auto;
+  max-width: 300px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: width 2s ease-out 0.5s, opacity 1s ease-in-out 0.5s;
+}
+
+.decorativeBarFill.fillAnimation {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 200px;
+  }
+}
