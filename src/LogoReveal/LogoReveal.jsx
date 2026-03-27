@@ -38,7 +38,7 @@ export const LogoReveal = ({ logoSrc, alt = "Logo", onAnimationComplete }) => {
           className={styles.logo}
         />
         <div className={`${styles.particleContainer} ${showLogo ? styles.showParticles : ''}`}>
-          {[...Array(8)].map((_, i) => (
+          {[...Array(12)].map((_, i) => (
             <div key={i} className={styles.particle} style={{ '--delay': `${i * 0.2}s` }} />
           ))}
         </div>
