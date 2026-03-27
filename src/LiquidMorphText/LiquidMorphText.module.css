@@ -47,7 +47,6 @@
   text-align: center;
   border: 2px solid var(--color-primary);
   width: fit-content;
-  max-width: 50%;
   min-width: 120px;
   box-sizing: border-box;
   
