@@ -25,7 +25,7 @@
   height: 100%;
   background: #000000;
   z-index: 2;
-  transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blackScreen.fadeOut {
@@ -69,21 +69,59 @@
   opacity: 1;
 }
 
-.decorativeBarFill {
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
+.particleContainer {
+  position: relative;
+  width: 200px;
+  height: 60px;
   margin: 20px auto;
-  max-width: 300px;
-  border-radius: 2px;
   opacity: 0;
-  transition: width 2s ease-out 0.5s, opacity 1s ease-in-out 0.5s;
+  transition: opacity 1s ease-in-out 0.5s;
 }
 
-.decorativeBarFill.fillAnimation {
-  width: 100%;
+.particleContainer.showParticles {
   opacity: 1;
 }
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: particleFloat 2s ease-in-out var(--delay) infinite;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+      calc(-50% + var(--x-offset, 0px)), 
+      calc(-50% + var(--y-offset, -30px))
+    ) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Set different directions for each particle */
+.particle:nth-child(1) { --x-offset: -40px; --y-offset: -20px; }
+.particle:nth-child(2) { --x-offset: 40px; --y-offset: -20px; }
+.particle:nth-child(3) { --x-offset: -50px; --y-offset: 10px; }
+.particle:nth-child(4) { --x-offset: 50px; --y-offset: 10px; }
+.particle:nth-child(5) { --x-offset: -30px; --y-offset: -30px; }
+.particle:nth-child(6) { --x-offset: 30px; --y-offset: -30px; }
+.particle:nth-child(7) { --x-offset: -60px; --y-offset: 0px; }
+.particle:nth-child(8) { --x-offset: 60px; --y-offset: 0px; }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
