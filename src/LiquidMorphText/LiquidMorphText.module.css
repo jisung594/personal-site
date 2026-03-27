@@ -51,7 +51,7 @@
   box-sizing: border-box;
   
   /* Initial button state - add liquid morph properties */
-  filter: blur(4px) contrast(1.5) brightness(1.2);
+  filter: blur(2px) contrast(1.5) brightness(1.2);
   transform: scale(0.95) translateY(10px);
   opacity: 0.4;
   transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1); 
