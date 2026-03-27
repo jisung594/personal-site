@@ -1,7 +1,8 @@
-import { useEffect, Suspense, lazy } from 'react';
+import { useEffect, Suspense, lazy, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './Header/Header.jsx';
 import { Footer } from './Footer/Footer.jsx';
+import { SplashScreen } from './SplashScreen/SplashScreen.jsx';
 
 // Lazy load components for code splitting
 const Home = lazy(() => import('./Home/Home.jsx').then(module => ({ default: module.Home })));
@@ -47,24 +48,33 @@ const LoadingSpinner = () => (
 const AppContent = () => {
   const location = useLocation();
   const currentLocation = location.pathname;
+  const [showSplash, setShowSplash] = useState(false); // Start with false for direct navigation
+  const isHomepage = currentLocation === '/';
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+
   return (
-    <div className="App">
-      <Header currentLocation={currentLocation} />
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/2025" element={<Bio />} />
-          <Route path="/mini-ui-kit" element={<MiniUiKit />} />
-        </Routes>
-      </Suspense>
-      <Footer />
-    </div>
+    <>
+      {isHomepage && <SplashScreen onComplete={handleSplashComplete} />}
+      <div className="App" style={{ opacity: showSplash ? 0 : 1, transition: 'opacity 2s ease-in-out' }}>
+        <Header currentLocation={currentLocation} />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/2025" element={<Bio />} />
+            <Route path="/mini-ui-kit" element={<MiniUiKit />} />
+          </Routes>
+        </Suspense>
+        <Footer />
+      </div>
+    </>
   );
 };
 
