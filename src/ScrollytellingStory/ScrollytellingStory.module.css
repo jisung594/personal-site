@@ -162,6 +162,14 @@
   align-items: flex-start;
 }
 
+/* Mobile responsive - change to row layout on smaller screens */
+@media (max-width: 768px) {
+  .projectLinkStep .buttonContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 /* Overrides for button instances on homepage */
 .projectLinkCta {
   width: fit-content;
