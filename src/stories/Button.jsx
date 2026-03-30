@@ -27,13 +27,13 @@ export const Button = ({
     }
   }, [isActive, delay, clean]);
 
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  const cleanMode = clean ? 'storybook-button--clean' : '';
+  const mode = primary ? 'site-button--primary' : 'site-button--secondary';
+  const cleanMode = clean ? 'site-button--clean' : '';
   
   return (
     <a
       href={href}
-      className={['storybook-button', `storybook-button--${size}`, mode, cleanMode, !clean && isAnimating ? 'morphed' : ''].join(' ')}
+      className={['site-button', `site-button--${size}`, mode, cleanMode, !clean && isAnimating ? 'morphed' : ''].join(' ')}
       {...props}
     >
       {children}
