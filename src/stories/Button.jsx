@@ -10,13 +10,14 @@ export const Button = ({
   children,
   isActive = false,
   delay = 0,
+  clean = false,
   ...props
 }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const hasAnimated = useRef(false);
 
   useEffect(() => {
-    if (isActive && !hasAnimated.current) {
+    if (isActive && !hasAnimated.current && !clean) {
       const timer = setTimeout(() => {
         setIsAnimating(true);
         hasAnimated.current = true;
@@ -24,14 +25,15 @@ export const Button = ({
 
       return () => clearTimeout(timer);
     }
-  }, [isActive, delay]);
+  }, [isActive, delay, clean]);
 
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const cleanMode = clean ? 'storybook-button--clean' : '';
   
   return (
     <a
       href={href}
-      className={['storybook-button', `storybook-button--${size}`, mode, isAnimating ? 'morphed' : ''].join(' ')}
+      className={['storybook-button', `storybook-button--${size}`, mode, cleanMode, !clean && isAnimating ? 'morphed' : ''].join(' ')}
       {...props}
     >
       {children}
@@ -54,4 +56,6 @@ Button.propTypes = {
   isActive: PropTypes.bool,
   /** Animation delay in milliseconds */
   delay: PropTypes.number,
+  /** Whether to disable liquid morph animation for clean UI */
+  clean: PropTypes.bool,
 };
