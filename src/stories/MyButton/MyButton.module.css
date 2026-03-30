@@ -5,11 +5,8 @@
     text-align: center;
     cursor: pointer;
     border: 0;
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 700;
-    /* line-height: 1;
-    letter-spacing: 0.1em; */
-
+    font-family: var(--font-heading);
+    font-weight: var(--font-medium);
     white-space: normal;
     box-sizing: border-box;
 }
@@ -19,71 +16,69 @@
 }
 
 .primary {
-    background-color: #FF9900;
+    background-color: var(--color-primary);
     color: white;
+    border: 2px solid transparent;
 }
 
 .primary:focus {
-    outline: 2px solid #D27E00;
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
     /* background-color: transparent; */
 }
 
 .primary:hover {
-    box-shadow: none;
-    background-color: #FFBD58;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    background-color: #0052a3;
     color: white;
 }
 
 .primary:active {
-    background-color: #D27E00;
+    background-color: #0052a3;
     color: white;
 }
 
 .secondary {
-    box-shadow: rgba(0, 0, 0, 1) 0px 0px 0px 2px inset;
+    border: 2px solid var(--color-secondary);
     background-color: transparent;
-    color: #000000;
+    color: var(--color-secondary);
 }
+
 .secondary:focus {
-    outline: 2px solid #006391;
+    outline: 2px solid var(--color-secondary);
     outline-offset: 2px;
     background-color: transparent;
 }
+
 .secondary:hover {
     box-shadow: none;
-    background-color: #4FB6E5;
+    background-color: var(--color-secondary);
     color: white;
 }
+
 .secondary:active {
-    background-color: #006391;
+    background-color: var(--color-secondary);
     color: white;
 }
 
 .disabled {
-    background-color: #EBEBEB;
-    color: #4D4D4D;
+    background-color: var(--color-gray-light);
+    color: var(--color-gray-dark);
 }
 
-
-
-
-
 .small {
-    padding: 10px 16px;
-    font-size: 12px;
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--text-sm);
 }
 
 .medium {
-    height: auto;
-    min-height: 40px;
-    font-size: 14px;
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-base);
     line-height: 24px;
     letter-spacing: 0.08em;
-    padding: 8px 23.5px;
 }
 
 .large {
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--text-lg);
 }
