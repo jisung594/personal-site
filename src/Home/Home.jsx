@@ -31,10 +31,10 @@ const stepData = [
     imageUrl: null,
   },
   {
-    heading: 'Mini UI Kit',
-    paragraph: `An exploration of component design and implementation, blending frontend development with visual design. Created as a practical study of modern component architecture, with components designed in Figma and implemented in React. Storybook serves as the development and documentation environment for this experimental component library.`,
+    heading: 'Design System',
+    paragraph: `A scalable design system with reusable components built for consistency across projects. Features buttons, inputs, toggles, and cards with documented usage patterns. Components are implemented in React with Storybook documentation and Figma design specifications.`,
     links: [
-      { primary: true, label: 'DEMO', href: '/mini-ui-kit' },
+      { primary: true, label: 'VIEW', href: '/mini-ui-kit' },
       { primary: false, label: 'FIGMA', href: 'https://www.figma.com/design/iUEUiDkx3jtnYPtJyTNjjE/Mini-Component-Library?node-id=490-189' },
       { primary: false, label: 'STORYBOOK', href: 'https://jisungchoi.com/storybook' }
     ],
