@@ -1,58 +1,56 @@
 .inputWrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-sm);
   width: 240px;
-  font-family: 'Gilroy', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .label {
-  font-size: 14px;
-  font-weight: 700;
-  color: #000000;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   transition: color 0.15s ease-out;
 }
 
 .inputField {
-  height: 40px;
+  height: 100%;
   width: 100%;
-  padding: 8px 12px;
-  font-size: 14px;
-  line-height: 24px;
-  border: 2px solid #000000;
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-base);
+  line-height: var(--text-lg);
+  border: 2px solid var(--color-gray-dark);
   background-color: transparent;
-  color: #000000;
+  color: var(--color-text);
   box-sizing: border-box;
+  font-family: var(--font-heading);
+  font-weight: var(--font-normal);
   transition: border-color 0.15s ease-out, background-color 0.15s ease-out;
 }
 
 .inputField::placeholder {
-  color: #999999;
-  opacity: 1;
+  color: var(--color-gray-dark);
+  opacity: 0.6;
 }
 
 .inputField:hover {
-  border-color: #4FB6E5;
+  border-color: var(--color-primary);
 }
 
 .inputWrapper:hover .label {
-  color: #4FB6E5;
+  color: var(--color-primary);
 }
 
 .inputField:focus {
   outline: none;
-  border-color: #006391;
+  border-color: var(--color-primary);
   background-color: #FFFFFF;
-  color: #000000;
+  color: var(--color-text);
 }
 
 .inputField:focus + .label,
 .inputWrapper:focus-within .label {
-  color: #006391;
+  color: var(--color-primary);
 }
-
-/* TODO: adjust JSX to put label after input for + selector / use JS for full control */
-/* TODO: make sure label color changes when the input is focused */
-/* (:focus-within on the wrapper is CSS-only / not all browsers fully support :focus-within) */

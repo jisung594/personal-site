@@ -1,5 +1,5 @@
 .myCard {
-    font-family: 'Gilroy', sans-serif;
+    font-family: var(--font-heading);
     background-color: #FFFFFF;
     box-sizing: border-box;
     width: 300px;
@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #EBEBEB; /* Placeholder bg */
+    background-color: var(--color-gray-light);
 }
 
 .cardImage {
@@ -31,21 +31,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #EBEBEB; /* Placeholder bg */
+    background-color: var(--color-gray-dark);
 }
 
 .cardContent {
     padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    border: 2px solid #000000;
-    /* background-color: #EBEBEB; */
+    gap: var(--space-sm);
+    border: 2px solid var(--color-gray-dark);
 }
-
-/* .myCardOpen .cardContent {
-    background-color: #FFFFFF;
-} */
 
 .cardHeader {
     display: flex;
@@ -57,12 +52,13 @@
 }
 
 .myCardOpen .cardHeader {
-    padding-bottom: 8px;
+    padding-bottom: var(--space-sm);
 }
 
 .cardTitleAndSecondaryText {
     display: flex;
     flex-direction: column;
+    gap: var(--space-sm);
     align-items: flex-start;
     flex-grow: 1;
 }
@@ -70,21 +66,21 @@
 .cardTitle {
     font-size: 18px;
     font-weight: bold;
-    color: #000000;
+    color: var(--color-text);
     margin: 0;
     line-height: 1.2;
 }
 
 .secondaryText {
     font-size: 14px;
-    color: #4D4D4D;
+    color: var(--color-gray-dark);
     margin: 0;
     line-height: 1.4;
 }
 
 .dropdownArrow {
     font-size: 16px;
-    color: #000000;
+    color: var(--color-text);
     transition: transform 0.2s ease-out;
     margin-left: 16px;
     flex-shrink: 0;
@@ -96,45 +92,26 @@
 
 /* Card Body (expanded content for vertical, always visible for horizontal) */
 .cardBody {
-    background-color: #EBEBEB;
-    padding: 16px;
-    margin: -16px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-md);
+    margin: calc(-1 * var(--space-md));
     margin-top: 0;
-    /* border-top: 2px solid #000000; */
     box-sizing: border-box;
 }
 
 .cardBody .bodyText {
-    font-size: 14px;
-    color: #4D4D4D;
-    margin-top: 0;
-    margin-bottom: 16px;
-    line-height: 1.5;
+    font-size: var(--text-sm);
+    color: var(--color-gray-dark);
+    margin: 0;
+    line-height: 1.4;
 }
 
 .ctaButtonContainer {
     display: flex;
-    gap: 8px;
+    gap: var(--space-sm);
     flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
-}
-
-.ctaButton {
-    background-color: #4FB6E5;
-    color: #000000;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.15s ease-out, border-color 0.15s ease-out, color 0.15s ease-out;
-    box-sizing: border-box;
-}
-
-.ctaButton:hover,
-.ctaButton:focus {
-    background-color: #006391;
-    color: #FFFFFF;
-    outline: none;
 }
 
 /* --- VERTICAL VARIANT SPECIFIC STYLES --- */
@@ -146,25 +123,23 @@
 /* --- INTERACTIVE STATES FOR CARDS --- */
 
 .myCard:hover .cardContent {
-    border-color: #4FB6E5;
-    /* border: 2px solid #4FB6E5; */
+    border-color: var(--color-primary);
     cursor: pointer;
 }
 
 .myCard:focus-within .cardContent {
-    border-color: #006391;
-    /* border: 2px solid #006391; */
+    border-color: var(--color-primary);
     outline: none;
 }
 
 .myCard--vertical .cardHeader:hover .cardTitle,
 .myCard--vertical .cardHeader:hover .secondaryText,
 .myCard--vertical .cardHeader:hover .dropdownArrow {
-    color: #4FB6E5;
+    color: var(--color-primary);
 }
 
 .myCard--vertical .cardHeader:focus .cardTitle,
 .myCard--vertical .cardHeader:focus .secondaryText,
 .myCard--vertical .cardHeader:focus .dropdownArrow {
-    color: #006391;
+    color: var(--color-primary);
 }
