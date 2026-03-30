@@ -161,6 +161,7 @@ export const MyCombobox = ({
           onClick={handleToggleDropdown}
           onKeyDown={handleKeyDown}
           ref={inputRef}
+          role="combobox"
           aria-haspopup="listbox"
           aria-expanded={isOpen}
           aria-controls="combobox-options"

@@ -60,6 +60,7 @@ export const MiniUiKit = ({ ...props }) => {
     return () => {
       observer.disconnect();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Utility function to get the correct CSS class based on visibility
