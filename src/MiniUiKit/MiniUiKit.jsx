@@ -79,8 +79,8 @@ export const MiniUiKit = ({ ...props }) => {
       <div ref={sectionRefs.buttons} data-section="buttons" className={getSectionClass('buttons')}>
         <h2 className={styles.sectionTitle}>Buttons</h2>
         <div className={styles.buttonsContainer}>
-          <Button href="#" clean onClick={() => handleButtonClick('CANCEL')}>CANCEL</Button>
-          <Button primary href="#" clean onClick={() => handleButtonClick('PUBLISH')}>PUBLISH</Button>
+          <Button clean onClick={() => handleButtonClick('CANCEL')}>CANCEL</Button>
+          <Button primary clean onClick={() => handleButtonClick('PUBLISH')}>PUBLISH</Button>
         </div>
       </div>
 
