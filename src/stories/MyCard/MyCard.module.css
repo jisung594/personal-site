@@ -123,13 +123,18 @@
 /* --- INTERACTIVE STATES FOR CARDS --- */
 
 .myCard:hover .cardContent {
-    border-color: var(--color-primary);
-    cursor: pointer;
+    border-color: var(--color-gray-light);
 }
 
 .myCard:focus-within .cardContent {
     border-color: var(--color-primary);
     outline: none;
+}
+
+.myCard:focus-within .cardTitle,
+.myCard:focus-within .secondaryText,
+.myCard:focus-within .dropdownArrow {
+    color: var(--color-primary);
 }
 
 .myCard--vertical .cardHeader:hover .cardTitle,
