@@ -39,18 +39,42 @@
   opacity: 1;
 }
 
-/* Hover effects using design system */
-.storybook-button:hover {
+/* Clean variant for UI kit - no liquid morph effects */
+.storybook-button--clean {
+  filter: none;
+  transform: none;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.storybook-button--clean:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.storybook-button--clean.storybook-button--primary:hover {
+  background-color: #0052a3;
+  border-color: #0052a3;
+}
+
+.storybook-button--clean.storybook-button--secondary:hover {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  border-color: var(--color-secondary);
+}
+
+/* Hover effects for regular buttons (non-clean) */
+.storybook-button:not(.storybook-button--clean):hover {
   transition: var(--transition-slow, 0.8s) var(--ease-out, ease-out);
 }
 
-.storybook-button--primary:hover {
+.storybook-button:not(.storybook-button--clean).storybook-button--primary:hover {
   background-color: transparent;
   color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
-.storybook-button--secondary:hover {
+.storybook-button:not(.storybook-button--clean).storybook-button--secondary:hover {
   background-color: var(--color-secondary);
   color: #ffffff;
   border-color: var(--color-secondary);
