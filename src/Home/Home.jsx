@@ -34,7 +34,7 @@ const stepData = [
     heading: 'Mini UI Kit',
     paragraph: `A compact design system, showcasing UI components and development patterns. Built with React and Storybook for interactive exploration and documentation.`,
     links: [
-      { primary: true, label: 'DEMO', href: '/mini-ui-kit' },
+      { primary: true, label: 'VIEW', href: '/mini-ui-kit' },
       { primary: false, label: 'FIGMA', href: 'https://www.figma.com/design/iUEUiDkx3jtnYPtJyTNjjE/Mini-Component-Library?node-id=490-189' },
       { primary: false, label: 'STORYBOOK', href: 'https://jisungchoi.com/storybook' }
     ],

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './MiniUiKit.module.css';
-import { Button } from '../stories/Button';
+import { MyButton } from '../stories/MyButton/MyButton.jsx';
 import { MyInput } from '../stories/MyInput/MyInput.jsx';
 import { MyToggle } from '../stories/MyToggle/MyToggle.jsx';
 import { MyCombobox } from '../stories/MyCombobox/MyCombobox.jsx';
@@ -8,11 +8,6 @@ import { MyCard } from '../stories/MyCard/MyCard.jsx';
 
 // The main component to showcase all UI elements with scrollytelling effects
 export const MiniUiKit = ({ ...props }) => {
-  // A simple mock function to demonstrate button click functionality
-  const handleButtonClick = (buttonLabel) => {
-    console.log(`Clicked on: ${buttonLabel}`);
-  };
-
   // State to track the visibility of each section for transitions
   const [sectionVisibility, setSectionVisibility] = useState({
     buttons: false,
@@ -65,6 +60,7 @@ export const MiniUiKit = ({ ...props }) => {
     return () => {
       observer.disconnect();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Utility function to get the correct CSS class based on visibility
@@ -79,8 +75,8 @@ export const MiniUiKit = ({ ...props }) => {
       <div ref={sectionRefs.buttons} data-section="buttons" className={getSectionClass('buttons')}>
         <h2 className={styles.sectionTitle}>Buttons</h2>
         <div className={styles.buttonsContainer}>
-          <Button href="#" clean onClick={() => handleButtonClick('CANCEL')}>CANCEL</Button>
-          <Button primary href="#" clean onClick={() => handleButtonClick('PUBLISH')}>PUBLISH</Button>
+          <MyButton label="CANCEL"></MyButton>
+          <MyButton primary={true} label="PUBLISH"></MyButton>
         </div>
       </div>
 
@@ -96,7 +92,6 @@ export const MiniUiKit = ({ ...props }) => {
         <h2 className={styles.sectionTitle}>Toggle</h2>
         <div className={styles.togglesContainer}>
           <MyToggle initialState={false} label={'TOGGLE'} />
-          {/* <MyToggle initialState={true} label={'TOGGLE'} /> */}
         </div>
       </div>
 
@@ -124,13 +119,13 @@ export const MiniUiKit = ({ ...props }) => {
           {/* Card with an image */}
           <MyCard
             title={'Jonathan Choi'}
-            secondaryText={'Web Developer'}
+            secondaryText={'Engineer'}
             bodyText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida vestibulum ante vel pulvinar.'}
             imageUrl={`${process.env.PUBLIC_URL}/images/jona.jpeg`}
             imageAlt={'Guy holding double thumbs up by Lake Michigan'}
             ctaButtons={[
-              { primary: false, label: 'CTA #1', onClick: () => handleButtonClick('Card CTA 1') },
-              { primary: false, label: 'CTA #2', onClick: () => handleButtonClick('Card CTA 2') },
+              { primary: true, label: 'CTA #1'},
+              { primary: true, label: 'CTA #2'},
             ]}
           />
           {/* Card without an image */}
@@ -141,8 +136,8 @@ export const MiniUiKit = ({ ...props }) => {
             imageUrl={''}
             imageAlt={'No image provided'}
             ctaButtons={[
-              { primary: false, label: 'CTA #1', onClick: () => handleButtonClick('Card CTA 1') },
-              { primary: false, label: 'CTA #2', onClick: () => handleButtonClick('Card CTA 2') },
+              { primary: true, label: 'CTA #1'},
+              { label: 'CTA #2'},
             ]}
           />
         </div>

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
-import { LiquidMorphText } from '../LiquidMorphText/LiquidMorphText';
 import { Button } from '../stories/Button';
 import { Logo } from '../Logo/Logo';
 import styles from './ScrollytellingStory.module.css';

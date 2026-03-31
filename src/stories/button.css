@@ -1,4 +1,4 @@
-.storybook-button {
+.site-button {
   font-family: var(--font-heading);
   font-size: var(--text-lg);
   font-weight: var(--font-medium);
@@ -20,19 +20,19 @@
   opacity: 0.4;
 }
 
-.storybook-button--primary {
+.site-button--primary {
   background-color: var(--color-primary);
   color: #ffffff;
 }
 
-.storybook-button--secondary {
+.site-button--secondary {
   background-color: transparent;
   color: var(--color-secondary);
   border-color: var(--color-secondary);
 }
 
 /* Liquid morph animation state */
-.storybook-button.morphed {
+.site-button.morphed {
   /* Final button state */
   filter: blur(0) contrast(1) brightness(1);
   transform: scale(1) translateY(0);
@@ -40,58 +40,58 @@
 }
 
 /* Clean variant for UI kit - no liquid morph effects */
-.storybook-button--clean {
+.site-button--clean {
   filter: none;
   transform: none;
   opacity: 1;
   transition: all 0.2s ease-in-out;
 }
 
-.storybook-button--clean:hover {
+.site-button--clean:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
 }
 
-.storybook-button--clean.storybook-button--primary:hover {
+.site-button--clean.site-button--primary:hover {
   background-color: #0052a3;
   border-color: #0052a3;
 }
 
-.storybook-button--clean.storybook-button--secondary:hover {
+.site-button--clean.site-button--secondary:hover {
   background-color: var(--color-secondary);
   color: #ffffff;
   border-color: var(--color-secondary);
 }
 
 /* Hover effects for regular buttons (non-clean) */
-.storybook-button:not(.storybook-button--clean):hover {
+.site-button:not(.site-button--clean):hover {
   transition: var(--transition-slow, 0.8s) var(--ease-out, ease-out);
 }
 
-.storybook-button:not(.storybook-button--clean).storybook-button--primary:hover {
+.site-button:not(.site-button--clean).site-button--primary:hover {
   background-color: transparent;
   color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
-.storybook-button:not(.storybook-button--clean).storybook-button--secondary:hover {
+.site-button:not(.site-button--clean).site-button--secondary:hover {
   background-color: var(--color-secondary);
   color: #ffffff;
   border-color: var(--color-secondary);
 }
 
 /* Size variants */
-.storybook-button--small {
+.site-button--small {
   padding: var(--space-xs) var(--space-md);
   font-size: var(--text-sm);
 }
 
-.storybook-button--medium {
+.site-button--medium {
   padding: var(--space-sm) var(--space-lg);
   font-size: var(--text-lg);
 }
 
-.storybook-button--large {
+.site-button--large {
   padding: var(--space-md) var(--space-xl);
   font-size: var(--text-xl);
 }
