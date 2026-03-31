@@ -1,0 +1,127 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-xl) var(--space-lg);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.fullHeight {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: var(--space-2xl);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  margin: 0 0 var(--space-xl) 0;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.content {
+  margin-bottom: var(--space-2xl);
+}
+
+.contactMethods {
+  text-align: center;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-md);
+  border: 1px solid var(--color-gray-light);
+}
+
+.contactLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  background-color: #FFFFFF;
+  color: var(--color-text);
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-gray-light); /* Separator between options */
+  transition: background-color 0.8s var(--ease-out), color 0.8s var(--ease-out);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+}
+
+.contactLink:last-child {
+  border-bottom: none; /* No border for the last option */
+}
+
+.contactLink:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-2px);
+  transition: transform 0.8s var(--ease-out);
+}
+
+.contactType {
+  font-family: var(--font-heading);
+  font-weight: var(--font-medium);
+  color: var(--color-secondary);
+}
+
+.contactValue {
+  font-family: var(--font-body);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.contactLink:hover .contactType,
+.contactLink:hover .contactValue {
+  color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .title {
+    font-size: var(--text-2xl);
+  }
+
+  .subtitle {
+    font-size: var(--text-md);
+  }
+
+  .contactLink {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .contactType {
+    font-size: var(--text-sm);
+  }
+
+  .contactValue {
+    font-size: var(--text-sm);
+  }
+}

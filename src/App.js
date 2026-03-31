@@ -9,6 +9,7 @@ const Home = lazy(() => import('./Home/Home.jsx').then(module => ({ default: mod
 const About = lazy(() => import('./About/About.jsx').then(module => ({ default: module.About })));
 const Bio = lazy(() => import('./Bio/Bio.jsx').then(module => ({ default: module.Bio })));
 const MiniUiKit = lazy(() => import('./MiniUiKit/MiniUiKit.jsx').then(module => ({ default: module.MiniUiKit })));
+const Contact = lazy(() => import('./Contact/Contact.jsx').then(module => ({ default: module.Contact })));
 
 // Simple loading component
 const LoadingSpinner = () => (
@@ -80,6 +81,7 @@ const AppContent = () => {
             <Route path="/about" element={<About />} />
             <Route path="/2025" element={<Bio />} />
             <Route path="/mini-ui-kit" element={<MiniUiKit />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Suspense>
         <Footer />

@@ -27,6 +27,7 @@ export const Header = () => {
       <nav className={styles.navDesktop}>
         <NavLink to="/" className={styles.navLink}>HOME</NavLink>
         <NavLink to="/about" className={styles.navLink}>ABOUT</NavLink>
+        <NavLink to="/contact" className={styles.navLink}>CONTACT</NavLink>
       </nav>
       <button 
         className={styles.menuButton} 
@@ -42,6 +43,7 @@ export const Header = () => {
           <nav className={styles.navMobile}>
             <NavLink to="/" className={styles.navLink}>HOME</NavLink>
             <NavLink to="/about" className={styles.navLink}>ABOUT</NavLink>
+            <NavLink to="/contact" className={styles.navLink}>CONTACT</NavLink>
           </nav>
         </div>
     </div>
