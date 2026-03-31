@@ -3,7 +3,7 @@ import { ScrollytellingStory } from '../ScrollytellingStory/ScrollytellingStory'
 const stepData = [
   {
     heading: 'JONATHAN CHOI',
-    paragraph: `Software engineer who bridges design and engineering to build efficient, maintainable systems. 
+    paragraph: `Design engineer with a focus on building efficient, maintainable systems. 
       I optimize performance and craft clean interfaces that deliver intuitive user experiences.`,
     background: '#f1f1f1',
     darkmode: false,
@@ -32,7 +32,7 @@ const stepData = [
   },
   {
     heading: 'Mini UI Kit',
-    paragraph: `An exploration of component design and implementation, blending frontend development with visual design. Created as a practical study of modern component architecture, with components designed in Figma and implemented in React. Storybook serves as the development and documentation environment for this experimental component library.`,
+    paragraph: `A compact design system, showcasing UI components and development patterns. Built with React and Storybook for interactive exploration and documentation.`,
     links: [
       { primary: true, label: 'DEMO', href: '/mini-ui-kit' },
       { primary: false, label: 'FIGMA', href: 'https://www.figma.com/design/iUEUiDkx3jtnYPtJyTNjjE/Mini-Component-Library?node-id=490-189' },
