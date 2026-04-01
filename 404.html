@@ -2,18 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Single Page App</title>
-    <script type="text/javascript">
-      // Segment the URL to get the base path
-      var l = window.location;
-      var base = l.pathname.split('/')[1];
-      l.replace(l.pathname, '/' + base + '/');
+    <title>Redirecting...</title>
+    <script>
+      // Simple redirect based on URL path
+      (function() {
+        var path = window.location.pathname;
+        
+        // Remove leading slash if present
+        path = path.replace(/^\//, '');
+        
+        // Route mapping
+        var routes = {
+          '': '/',
+          'contact': '/contact',
+          'mini-ui-kit': '/mini-ui-kit',
+          'about': '/about',
+          '2025': '/2025'
+        };
+        
+        // Find matching route
+        for (var route in routes) {
+          if (path.startsWith(route)) {
+            window.location.replace('/' + routes[route]);
+            return;
+          }
+        }
+        
+        // Default to home
+        window.location.replace('/');
+      })();
     </script>
   </head>
   <body>
-    <script type="text/javascript">
-      // Redirect to the base path
-      window.location.replace('/' + base + '/');
-    </script>
+    <p>Redirecting...</p>
   </body>
 </html>
