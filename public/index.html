@@ -26,11 +26,13 @@
     -->
     <title>Jon Choi</title>
     <script>
-      // Set dynamic base href for GitHub Pages routing
+      // Check if we were redirected from 404.html
       (function() {
-        var base = document.createElement('base');
-        base.href = window.location.origin + '/';
-        document.head.appendChild(base);
+        var redirectPath = sessionStorage.getItem('redirectPath');
+        if (redirectPath) {
+          sessionStorage.removeItem('redirectPath');
+          history.replaceState(null, null, redirectPath);
+        }
       })();
     </script>
   </head>
