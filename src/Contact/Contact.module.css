@@ -8,18 +8,15 @@
   box-sizing: border-box;
 }
 
-.fullHeight {
-  min-height: 100vh;
-}
-
 .container {
-  max-width: 600px;
-  width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
 }
 
 .header {
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
+  max-width: 600px;
 }
 
 .title {
@@ -36,10 +33,6 @@
   color: var(--color-text);
   margin: 0;
   line-height: 1.6;
-}
-
-.content {
-  margin-bottom: var(--space-2xl);
 }
 
 .contactMethods {
@@ -65,7 +58,7 @@
   border-bottom: 1px solid var(--color-gray-light); /* Separator between options */
   transition: background-color 0.8s var(--ease-out), color 0.8s var(--ease-out);
   font-family: var(--font-body);
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   font-weight: var(--font-medium);
   text-decoration: none;
 }
@@ -108,7 +101,7 @@
   }
 
   .subtitle {
-    font-size: var(--text-md);
+    font-size: var(--text-base);
   }
 
   .contactLink {

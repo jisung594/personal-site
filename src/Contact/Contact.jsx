@@ -3,16 +3,18 @@ import styles from './Contact.module.css';
 
 export const Contact = ({ ...props }) => {
   return (
-    <div className={`${styles.contact} ${styles.fullHeight}`}>
+    <div className={styles.contact}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h1 className={styles.title}>CONTACT</h1>
           <p className={styles.subtitle}>
             I combine design thinking with engineering execution to build effective user experiences.
+          </p>
+          <br/>
+          <p className={styles.subtitle}>
             Looking forward to discussing how I can contribute to your team!
           </p>
         </div>
-
         <div className={styles.content}>
           <div className={styles.contactMethods}>
             <div className={styles.contactList}>

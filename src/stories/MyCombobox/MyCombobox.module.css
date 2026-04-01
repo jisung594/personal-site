@@ -9,7 +9,7 @@
 .label {
     display: block;
     margin-bottom: var(--space-sm);
-    font-size: var(--text-md);
+    font-size: var(--text-base);
     color: var(--color-text);
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -94,7 +94,7 @@
 
 .dropdownArrow {
     color: #FFFFFF;
-    font-size: var(--text-md);
+    font-size: var(--text-base);
     line-height: 1;
     transition: transform 0.2s ease-out, color 0.15s ease-out;
 }
