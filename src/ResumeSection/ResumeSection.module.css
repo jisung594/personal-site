@@ -1,0 +1,68 @@
+.resumeSection {
+  
+}
+
+.resumeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin: 0 auto;
+}
+
+.resumeTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-normal);
+  border-bottom: 1px solid var(--color-text);
+  width: fit-content;
+  margin-bottom: var(--space-lg);
+}
+
+.resumeDownloads {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.resumeLink {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.resumeLink:hover {
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resumeSection {
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .resumeTitle {
+    font-size: 2rem;
+  }
+
+  .resumeDownloads {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .resumeLink {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resumeSection {
+    padding: 1.5rem 1rem;
+  }
+
+  .resumeTitle {
+    font-size: 1.8rem;
+  }
+}
