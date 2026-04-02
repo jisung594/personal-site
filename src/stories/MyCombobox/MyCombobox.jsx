@@ -17,7 +17,6 @@ export const MyCombobox = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(initialValue || '');
-  const [inputValue, setInputValue] = useState(initialValue || ''); // For display in input field
   const [focusedOptionIndex, setFocusedOptionIndex] = useState(-1); // For keyboard navigation
   const comboboxRef = useRef(null);
   const inputRef = useRef(null);
@@ -41,7 +40,6 @@ export const MyCombobox = ({
   useEffect(() => {
     if (initialValue !== undefined) {
       setSelectedValue(initialValue);
-      setInputValue(initialValue);
     }
   }, [initialValue]);
 
@@ -73,7 +71,6 @@ export const MyCombobox = ({
 
   const handleOptionClick = (optionLabel) => {
     setSelectedValue(optionLabel);
-    setInputValue(optionLabel); // Displays selected option in input
     setIsOpen(false);
     if (onSelect) {
       onSelect(optionLabel);
@@ -86,7 +83,6 @@ export const MyCombobox = ({
   const handleClearSelection = (event) => {
     event.stopPropagation(); // Prevents dropdown from opening/closing
     setSelectedValue('');
-    setInputValue('');
     if (onSelect) {
       onSelect(''); // Notifies parent that selection is cleared
     }
