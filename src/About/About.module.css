@@ -11,7 +11,7 @@
   padding: var(--space-6xl) var(--space-2xl);
 }
 
-.generalInfo {
+.generalInfo, .experience {
   font-family: var(--font-body);
   font-size: var(--text-xl);
   display: flex;
@@ -86,7 +86,7 @@
 
   .skillsGrid {
     flex-direction: row;
-    gap: var(--space-4xl);
+    gap: var(--space-lg);
   }
 
   .skillsCategory {

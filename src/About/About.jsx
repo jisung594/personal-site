@@ -1,4 +1,5 @@
 import styles from './About.module.css';
+import { ResumeSection } from '../ResumeSection/ResumeSection';
 
 export const About = ({ ...props }) => {
   return (
@@ -19,34 +20,48 @@ export const About = ({ ...props }) => {
         <h1 className={styles.experienceTitle}>Technical Skills</h1>
         <div className={styles.skillsGrid}>
           <div className={styles.skillsCategory}>
-            <h3>CORE</h3>
+            <h3>FRONTEND</h3>
             <ul>
               <li>React</li>
-              <li>JavaScript/TypeScript</li>
-              <li>HTML/CSS</li>
               <li>Angular</li>
-              <li>Tailwind CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>HTML / CSS</li>
+              <li>Tailwind</li>
+              <li>Storybook</li>
             </ul>
           </div>
           <div className={styles.skillsCategory}>
             <h3>CMS & BACKEND</h3>
             <ul>
-              <li>Drupal</li>
               <li>PHP</li>
-              <li>Twig</li>
+              <li>Drupal</li>
               <li>Firebase</li>
+              <li>RESTful APIs</li>
             </ul>
           </div>
           <div className={styles.skillsCategory}>
-            <h3>TESTING</h3>
+            <h3>DESIGN</h3>
             <ul>
+              <li>Figma</li>
+              <li>Affinity Designer</li>
+              <li>Adobe Creative Suite</li>
+            </ul>
+          </div>
+          <div className={styles.skillsCategory}>
+            <h3>TESTING & TOOLS</h3>
+            <ul>
+              <li>Git</li>
+              <li>Lighthouse</li>
               <li>Behat</li>
-              <li>Cypress</li>
-              <li>Storybook</li>
+              <li>Postman</li>
+              <li>Drush</li>
             </ul>
           </div>
         </div>
       </div>
+      
+      <ResumeSection />
     </div>
   )
 }
