@@ -1,84 +1,97 @@
 .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
-    border: 0;
-    font-family: var(--font-heading);
-    font-weight: var(--font-medium);
-    white-space: normal;
-    box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+	border: 0;
+	font-family: var(--font-heading);
+	font-weight: var(--font-medium);
+	white-space: normal;
+	box-sizing: border-box;
+
+	/* Initial button state - add liquid morph properties */
+	filter: blur(1px) contrast(1.5) brightness(1.2);
+	transform: scale(0.95) translateY(10px);
+	opacity: 0.4;
+}
+
+/* Liquid morph animation state */
+.button.morphed {
+  /* Final button state */
+  filter: blur(0) contrast(1) brightness(1);
+  transform: scale(1) translateY(0);
+  opacity: 1;
 }
 
 .button:active {
-    transform: scale(0.97);
+  transform: scale(0.97);
 }
 
 .primary {
-    background-color: var(--color-primary);
-    color: white;
-    border: 2px solid transparent;
+	background-color: var(--color-primary);
+	color: white;
+	border: 2px solid transparent;
 }
 
 .primary:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-    /* background-color: transparent; */
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+	/* background-color: transparent; */
 }
 
 .primary:hover {
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-    background-color: #0052a3;
-    color: white;
+	box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+	background-color: #0052a3;
+	color: white;
 }
 
 .primary:active {
-    background-color: #0052a3;
-    color: white;
+	background-color: #0052a3;
+	color: white;
 }
 
 .secondary {
-    border: 2px solid var(--color-secondary);
-    background-color: transparent;
-    color: var(--color-secondary);
+	border: 2px solid var(--color-secondary);
+	background-color: transparent;
+	color: var(--color-secondary);
 }
 
 .secondary:focus {
-    outline: 2px solid var(--color-secondary);
-    outline-offset: 2px;
-    background-color: transparent;
+	outline: 2px solid var(--color-secondary);
+	outline-offset: 2px;
+	background-color: transparent;
 }
 
 .secondary:hover {
-    box-shadow: none;
-    background-color: var(--color-secondary);
-    color: white;
+	box-shadow: none;
+	background-color: var(--color-secondary);
+	color: white;
 }
 
 .secondary:active {
-    background-color: var(--color-secondary);
-    color: white;
+	background-color: var(--color-secondary);
+	color: white;
 }
 
 .disabled {
-    background-color: var(--color-gray-light);
-    color: var(--color-gray-dark);
+	background-color: var(--color-gray-light);
+	color: var(--color-gray-dark);
 }
 
 .small {
-    padding: var(--space-xs) var(--space-md);
-    font-size: var(--text-sm);
+	padding: var(--space-xs) var(--space-md);
+	font-size: var(--text-sm);
 }
 
 .medium {
-    padding: var(--space-sm) var(--space-lg);
-    font-size: var(--text-base);
-    line-height: 24px;
-    letter-spacing: 0.08em;
+	padding: var(--space-sm) var(--space-lg);
+	font-size: var(--text-base);
+	line-height: 24px;
+	letter-spacing: 0.08em;
 }
 
 .large {
-    padding: var(--space-md) var(--space-xl);
-    font-size: var(--text-lg);
+	padding: var(--space-md) var(--space-xl);
+	font-size: var(--text-lg);
 }

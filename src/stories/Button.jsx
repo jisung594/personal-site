@@ -11,6 +11,9 @@ export const Button = ({
   isActive = false,
   delay = 0,
   clean = false,
+  download = false,
+  target = '_blank',
+  rel = 'noopener noreferrer',
   ...props
 }) => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -33,6 +36,9 @@ export const Button = ({
   return (
     <a
       href={href}
+      download={download}
+      target={target}
+      rel={rel}
       className={['site-button', `site-button--${size}`, mode, cleanMode, !clean && isAnimating ? 'morphed' : ''].join(' ')}
       {...props}
     >
@@ -42,20 +48,15 @@ export const Button = ({
 };
 
 Button.propTypes = {
-  /** Is this the principal call to action on the page? */
   primary: PropTypes.bool,
-  /** Button size variant */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /** Button contents */
   children: PropTypes.node.isRequired,
-  /** Navigation destination */
   href: PropTypes.string,
-  /** Optional click handler */
   onClick: PropTypes.func,
-  /** Whether button should start liquid morph animation */
   isActive: PropTypes.bool,
-  /** Animation delay in milliseconds */
   delay: PropTypes.number,
-  /** Whether to disable liquid morph animation for clean UI */
   clean: PropTypes.bool,
+  download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  target: PropTypes.string,
+  rel: PropTypes.string,
 };
