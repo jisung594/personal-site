@@ -4,7 +4,6 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  /* justify-content: center; */
   box-sizing: border-box;
   background-color: var(--color-background);
   padding: var(--space-6xl) var(--space-2xl);
@@ -81,7 +80,7 @@
 /* Desktop styles */
 @media (min-width: 769px) {
   .fullHeight {
-    padding: var(--space-6xl);
+    padding: var(--space-7xl);
   }
 
   .skillsGrid {
