@@ -5,7 +5,7 @@ export const About = ({ ...props }) => {
   return (
     <div className={`${styles.about} ${styles.fullHeight}`}>
       <div className={styles.generalInfo}>
-        <h1 className={styles.generalTitle}>About</h1>
+        <h1 className={styles.generalTitle}>Bio</h1>
         <p className={styles.bio}>
           Design engineer with a focus on building efficient, maintainable frontend systems. 
           I bridge design and engineering to create performant interfaces that deliver intuitive user experiences.
