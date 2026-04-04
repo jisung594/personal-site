@@ -9,19 +9,6 @@
 	font-weight: var(--font-medium);
 	white-space: normal;
 	box-sizing: border-box;
-
-	/* Initial button state - add liquid morph properties */
-	filter: blur(1px) contrast(1.5) brightness(1.2);
-	transform: scale(0.95) translateY(10px);
-	opacity: 0.4;
-}
-
-/* Liquid morph animation state */
-.button.morphed {
-  /* Final button state */
-  filter: blur(0) contrast(1) brightness(1);
-  transform: scale(1) translateY(0);
-  opacity: 1;
 }
 
 .button:active {
