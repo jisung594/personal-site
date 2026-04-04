@@ -22,11 +22,11 @@
 }
 
 .title {
-
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
   font-weight: var(--font-normal);
-  border-bottom: 1px solid var(--color-text);
+  border-bottom: 1px dashed var(--color-gray-light);
+  padding-bottom: var(--space-sm);
   width: fit-content;
   margin: 0;
   margin-bottom: var(--space-lg);
@@ -49,7 +49,7 @@
   flex-direction: column;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-md);
-  border: 1px solid var(--color-gray-light);
+  border: 1px dashed var(--color-gray-light);
 }
 
 .contactLink {
@@ -59,7 +59,7 @@
   padding: var(--space-md) var(--space-lg);
   color: var(--color-text);
   cursor: pointer;
-  border-bottom: 1px solid var(--color-gray-light); /* Separator between options */
+  border-bottom: 1px dashed var(--color-gray-light); /* Separator between options */
   transition: background-color 0.8s var(--ease-out), color 0.8s var(--ease-out);
   font-family: var(--font-body);
   font-size: var(--text-base);
