@@ -3,7 +3,7 @@
   width: 100%;
   overflow: hidden;
   z-index: 0;
-  background-color: #000000;
+  background-color: var(--color-background);
 }
 
 .projectStep {

@@ -42,7 +42,7 @@ export const ScrollytellingStory = ({ storySteps }) => {
       <div className={styles.storyTextSections}>
         <Scrollama
           onStepEnter={onStepEnter}
-          offset={0.5} // Triggers when step is at 50% of the viewport height
+          offset={0.3} // Triggers when step is at 30% of viewport height
         >
           {storySteps.map((data, i) => (
             <Step key={i} data={i}>
