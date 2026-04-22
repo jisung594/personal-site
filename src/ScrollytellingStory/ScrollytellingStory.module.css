@@ -174,3 +174,45 @@
 .projectLinkCta {
   width: fit-content;
 }
+
+/* Architecture images container */
+.imagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.architectureImage {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.imageCaption {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Mobile responsive for images */
+@media (max-width: 768px) {
+  .architectureImage {
+    max-width: 100%;
+  }
+  
+  .imagesContainer {
+    margin: 1rem 0;
+    gap: 1.5rem;
+  }
+}

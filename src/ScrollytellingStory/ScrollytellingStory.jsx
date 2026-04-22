@@ -68,6 +68,22 @@ export const ScrollytellingStory = ({ storySteps }) => {
                 )}
                   {data.caption && <span>{data.caption}</span>}
                   {data.paragraph && <p>{data.paragraph}</p>}
+                  {data.images && (
+                    <div className={styles.imagesContainer}>
+                      {data.images.map((image, index) => (
+                        <div key={index} className={styles.imageWrapper}>
+                          <img 
+                            src={image.src} 
+                            alt={image.alt}
+                            className={styles.architectureImage}
+                          />
+                          {image.caption && (
+                            <p className={styles.imageCaption}>{image.caption}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   {
                     data.links && (
                       <div className={styles.buttonContainer}>
