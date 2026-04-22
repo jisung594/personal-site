@@ -10,12 +10,12 @@ const stepData = [
   },
   {
     heading: 'Component Architecture',
-    paragraph: `Data flow and system structure for the Angular 20 application.`,
+    paragraph: `Shows how components communicate through services and observables, with clear separation of concerns between presentation and business logic layers.`,
     images: [
       {
         src: '/images/docs/component-architecture.png',
         alt: 'Component Architecture Diagram',
-        caption: 'Component Architecture - Data flow and system structure'
+        caption: 'Data flow and system structure.'
       }
     ],
     background: '#f1f1f1',
@@ -24,20 +24,14 @@ const stepData = [
   },
   {
     heading: 'State Management',
-    paragraph: `Recipe editing functionality, demonstrating reactive forms and data binding patterns.`,
+    paragraph: `Illustrates the reactive form lifecycle and state transitions when users create, edit, or validate recipe data through the Angular forms API.`,
     images: [
       {
         src: '/images/docs/recipe-editor-state-transitions.png',
         alt: 'Recipe Editor State Transitions',
-        caption: 'State Management - State management flow for recipe editing functionality'
+        caption: 'State management flow for recipe editing functionality.'
       }
     ],
-    background: '#f1f1f1',
-    darkmode: false,
-    imageUrl: null,
-  },
-  {
-    heading: 'Thank you!',
     background: '#f1f1f1',
     darkmode: false,
     imageUrl: null,
