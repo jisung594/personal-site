@@ -6,12 +6,14 @@ import styles from './ScrollytellingStory.module.css';
 
 export const ScrollytellingStory = ({ storySteps }) => {
   const [currentStep, setCurrentStep] = useState(0);
+  const [modalImage, setModalImage] = useState(null);
 
   const onStepEnter = ({ data }) => {
     setCurrentStep(data);
   };
 
   return (
+    <>
     <div className={styles.storyContainer}>
       {/* Sidebar with dot navigation */}
       <div className={styles.storySidebar}>
@@ -76,6 +78,7 @@ export const ScrollytellingStory = ({ storySteps }) => {
                             src={image.src} 
                             alt={image.alt}
                             className={styles.architectureImage}
+                            onClick={() => setModalImage(image)}
                           />
                           {image.caption && (
                             <p className={styles.imageCaption}>{image.caption}</p>
@@ -107,6 +110,23 @@ export const ScrollytellingStory = ({ storySteps }) => {
         </Scrollama>
       </div>
     </div>
+    
+    {/* Modal overlay for enlarged images */}
+    {modalImage && (
+      <div className={styles.imageModal} onClick={() => setModalImage(null)}>
+        <div className={styles.modalContent}>
+          <img 
+            src={modalImage.src} 
+            alt={modalImage.alt}
+            className={styles.modalImage}
+          />
+          {modalImage.caption && (
+            <p className={styles.modalCaption}>{modalImage.caption}</p>
+          )}
+        </div>
+      </div>
+    )}
+    </>
   );
 };
 
