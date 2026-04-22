@@ -10,6 +10,7 @@ const About = lazy(() => import('./About/About.jsx').then(module => ({ default: 
 const Bio = lazy(() => import('./Bio/Bio.jsx').then(module => ({ default: module.Bio })));
 const MiniUiKit = lazy(() => import('./MiniUiKit/MiniUiKit.jsx').then(module => ({ default: module.MiniUiKit })));
 const Contact = lazy(() => import('./Contact/Contact.jsx').then(module => ({ default: module.Contact })));
+const PinchDocs = lazy(() => import('./PinchDocs/PinchDocs.jsx').then(module => ({ default: module.PinchDocs })));
 
 // Simple loading component
 const LoadingSpinner = () => (
@@ -81,6 +82,7 @@ const AppContent = () => {
             <Route path="/about" element={<About />} />
             <Route path="/2025" element={<Bio />} />
             <Route path="/mini-ui-kit" element={<MiniUiKit />} />
+            <Route path="/docs/pinch" element={<PinchDocs />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Suspense>
