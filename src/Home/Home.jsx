@@ -25,7 +25,7 @@ const stepData = [
     paragraph: `A recipe management application built with Angular 20, TypeScript, and Firebase. Features secure authentication, real-time Firestore database, and advanced search functionality. Applies reactive forms, RxJS, and component architecture while maintaining a mobile-first design optimized for kitchen workflow efficiency.`,
     links: [
       { primary: true, label: "DEMO", href: 'https://pinchthis.com/demo' },
-      { primary: false, label: "DOCUMENTATION", href: 'http://jisungchoi.com/docs/pinch' }
+      { primary: false, label: "DOCS", href: 'http://jisungchoi.com/docs/pinch' }
     ],
     background: '#f1f1f1',
     darkmode: false,
