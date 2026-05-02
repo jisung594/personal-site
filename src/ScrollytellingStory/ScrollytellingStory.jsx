@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
-import { Button } from '../stories/Button';
+import { MyButton } from '../stories/MyButton/MyButton';
 import { Logo } from '../Logo/Logo';
 import styles from './ScrollytellingStory.module.css';
 
@@ -91,15 +91,12 @@ export const ScrollytellingStory = ({ storySteps }) => {
                     data.links && (
                       <div className={styles.buttonContainer}>
                         {data.links.map((buttonItem, index) => (
-                          <Button 
+                          <MyButton 
                             key={index} 
                             primary={buttonItem.primary}
+                            label={buttonItem.label}
                             href={buttonItem.href}
-                            isActive={currentStep === i}
-                            delay={400 + (index * 100)}
-                          >
-                            {buttonItem.label}
-                          </Button>
+                          />
                         ))}
                       </div>
                     )

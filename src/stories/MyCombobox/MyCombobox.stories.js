@@ -1,6 +1,5 @@
 import { fn } from 'storybook/test';
 import { MyCombobox } from './MyCombobox';
-import styles from './MyCombobox.module.css';
 
 const sampleOptions = [
   { label: 'Option 1', value: 'value1' },

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ResumeSection.module.css';
-import { Button } from '../stories/Button';
+import { MyButton } from '../stories/MyButton/MyButton';
 
 export const ResumeSection = () => {
   return (
@@ -11,22 +11,16 @@ export const ResumeSection = () => {
         <div className={styles.resumeContent}>
           <p className={styles.resumeDescription}>Choose your preferred format:</p>
           <div className={styles.resumeDownloads}>
-            <Button 
+            <MyButton 
               primary
-              isActive={true}
+              label="PDF"
               href="/resume/jonathan-choi-resume.pdf" 
-              download="jonathan-choi-resume.pdf"
-            >
-              PDF
-            </Button>
+            />
             
-            <Button
-              isActive={true}
+            <MyButton
+              label="ATS"
               href="/resume/jonathan-choi-resume-ats.docx"
-              download="jonathan-choi-resume-ats.docx"
-            >
-              ATS
-            </Button>
+            />
           </div>
         </div>
       </div>
