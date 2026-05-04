@@ -6,7 +6,7 @@
 	cursor: pointer;
 	border: 0;
 	font-family: var(--font-heading);
-	font-weight: var(--font-medium);
+	font-weight: var(--font-weight-medium);
 	white-space: normal;
 	box-sizing: border-box;
 }
@@ -17,7 +17,7 @@
 
 .primary {
 	background-color: var(--color-primary);
-	color: white;
+	color: var(--color-background);
 	border: 2px solid transparent;
 }
 
@@ -29,13 +29,13 @@
 
 .primary:hover {
 	box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-	background-color: #0052a3;
-	color: white;
+	background-color: var(--color-primary);
+	color: var(--color-background);
 }
 
 .primary:active {
-	background-color: #0052a3;
-	color: white;
+	background-color: var(--color-primary);
+	color: var(--color-background);
 }
 
 .secondary {
@@ -53,12 +53,12 @@
 .secondary:hover {
 	box-shadow: none;
 	background-color: var(--color-secondary);
-	color: white;
+	color: var(--color-background);
 }
 
 .secondary:active {
 	background-color: var(--color-secondary);
-	color: white;
+	color: var(--color-background);
 }
 
 .disabled {
@@ -67,18 +67,18 @@
 }
 
 .small {
-	padding: var(--space-xs) var(--space-md);
-	font-size: var(--text-sm);
+	padding: var(--spacing-xs) var(--spacing-md);
+	font-size: var(--font-size-sm);
 }
 
 .medium {
-	padding: var(--space-sm) var(--space-lg);
-	font-size: var(--text-base);
+	padding: var(--spacing-sm) var(--spacing-lg);
+	font-size: var(--font-size-base);
 	line-height: 24px;
 	letter-spacing: 0.08em;
 }
 
 .large {
-	padding: var(--space-md) var(--space-xl);
-	font-size: var(--text-lg);
+	padding: var(--spacing-md) var(--spacing-xl);
+	font-size: var(--font-size-lg);
 }

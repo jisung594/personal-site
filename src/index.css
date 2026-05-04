@@ -1,48 +1,55 @@
 @import './styles/fonts.css';
+@import './styles/tokens.css';
 
 :root {
-  /* Spacing */
-  --space-xs: 0.25rem;    /* 4px */
-  --space-sm: 0.5rem;     /* 8px */
-  --space-md: 1rem;       /* 16px */
-  --space-lg: 1.5rem;     /* 24px */
-  --space-xl: 2rem;       /* 32px */
-  --space-2xl: 3rem;      /* 48px */
-  --space-3xl: 4rem;      /* 64px */
-  --space-4xl: 6rem;      /* 96px */
-  --space-5xl: 8rem;      /* 128px */
-  --space-6xl: 10rem;     /* 160px */
-  --space-7xl: 12rem;     /* 192px */
-  --space-8xl: 16rem;     /* 256px */
+  /* 
+   * DESIGN TOKENS - FIGMA SYNC
+   * These values map directly to Figma design system styles
+   * Update these values when Figma styles change to maintain consistency
+   */
 
-/* Typography */
---text-xs: 0.75rem;      /* 12px */
---text-sm: 0.875rem;     /* 14px */
---text-base: 1rem;        /* 16px */
---text-lg: 1.125rem;     /* 18px */
---text-xl: 1.25rem;       /* 20px */
---text-2xl: 1.5rem;       /* 24px */
---text-3xl: 1.875rem;     /* 30px */
---text-4xl: 2.25rem;       /* 36px */
---text-5xl: 3rem;         /* 48px */
+  /* Spacing Scale - Figma: "Spacing" styles */
+  --space-xs: 0.25rem;    /* 4px - Figma: "spacing-xs" */
+  --space-sm: 0.5rem;     /* 8px - Figma: "spacing-sm" */
+  --space-md: 1rem;       /* 16px - Figma: "spacing-md" */
+  --space-lg: 1.5rem;     /* 24px - Figma: "spacing-lg" */
+  --space-xl: 2rem;       /* 32px - Figma: "spacing-xl" */
+  --space-2xl: 3rem;      /* 48px - Figma: "spacing-2xl" */
+  --space-3xl: 4rem;      /* 64px - Figma: "spacing-3xl" */
+  --space-4xl: 6rem;      /* 96px - Figma: "spacing-4xl" */
+  --space-5xl: 8rem;      /* 128px - Figma: "spacing-5xl" */
+  --space-6xl: 10rem;     /* 160px - Figma: "spacing-6xl" */
+  --space-7xl: 12rem;     /* 192px - Figma: "spacing-7xl" */
+  --space-8xl: 16rem;     /* 256px - Figma: "spacing-8xl" */
 
-  /* Font families */
-  --font-heading: 'Oswald', sans-serif;
-  --font-body: 'Archivo', serif;
+  /* Typography Scale - Figma: "Text Styles" */
+  --text-xs: 0.75rem;      /* 12px - Figma: "text-xs" */
+  --text-sm: 0.875rem;     /* 14px - Figma: "text-sm" */
+  --text-base: 1rem;        /* 16px - Figma: "text-base" */
+  --text-lg: 1.125rem;     /* 18px - Figma: "text-lg" */
+  --text-xl: 1.25rem;       /* 20px - Figma: "text-xl" */
+  --text-2xl: 1.5rem;       /* 24px - Figma: "text-2xl" */
+  --text-3xl: 1.875rem;     /* 30px - Figma: "text-3xl" */
+  --text-4xl: 2.25rem;       /* 36px - Figma: "text-4xl" */
+  --text-5xl: 3rem;         /* 48px - Figma: "text-5xl" */
 
-  /* Font weights */
-  --font-light: 300;
-  --font-normal: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
+  /* Font Families - Figma: "Font Families" */
+  --font-heading: 'Oswald', sans-serif;    /* Figma: "Heading Font" */
+  --font-body: 'Archivo', serif;            /* Figma: "Body Font" */
 
-  /* Colors */
-  --color-primary: #0066cc;
-  --color-secondary: #cc0066;
-  --color-background: #f1f1f1;
-  --color-gray-dark: #5a5a5a;
-  --color-gray-light: #c9c9c9;
-  --color-text: #1d1d1d;
+  /* Font Weights - Figma: "Font Weights" */
+  --font-light: 300;       /* Figma: "Light" */
+  --font-normal: 400;      /* Figma: "Regular" */
+  --font-medium: 500;      /* Figma: "Medium" */
+  --font-semibold: 600;   /* Figma: "Semibold" */
+
+  /* Color Palette - Figma: "Colors" */
+  --color-primary: #0066cc;    /* Figma: "Primary Blue" */
+  --color-secondary: #cc0066;  /* Figma: "Secondary Pink" */
+  --color-background: #f1f1f1; /* Figma: "Background Gray" */
+  --color-gray-dark: #5a5a5a;   /* Figma: "Dark Gray" */
+  --color-gray-light: #c9c9c9; /* Figma: "Light Gray" */
+  --color-text: #1d1d1d;        /* Figma: "Text Black" */
 }
 
 body {

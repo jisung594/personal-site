@@ -46,7 +46,7 @@
 .inputField:focus {
   outline: none;
   border-color: var(--color-primary);
-  background-color: #FFFFFF;
+  background-color: var(--color-background);
   color: var(--color-text);
 }
 
