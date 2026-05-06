@@ -5,12 +5,12 @@
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
     "react-scrollama": "^2.4.2",
     "web-vitals": "^2.1.4"
@@ -23,7 +23,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "build-tokens": "node build-tokens.js"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +54,7 @@
     "gh-pages": "^6.3.0",
     "prop-types": "^15.8.1",
     "storybook": "^9.0.15",
+    "style-dictionary": "^5.4.0",
     "webpack": "^5.99.9",
     "webpack-bundle-analyzer": "^5.3.0"
   }
