@@ -38,7 +38,7 @@ export const Filled = {
 };
 
 // TODO: JS for user interaction, such as click and tab
-export const Active = {
+export const Focus = {
   args: {
     label: 'EMAIL',
     value: 'user@example.com',
@@ -49,5 +49,34 @@ export const Active = {
     if (input) {
       input.focus();
     }
+  },
+};
+
+export const Error = {
+  args: {
+    label: 'EMAIL',
+    value: 'myemail@example.commm',
+    error: true,
+  },
+};
+
+export const Hover = {
+  args: {
+    label: 'EMAIL',
+    placeholder: 'Select an option',
+  },
+  play: async ({ canvasElement }) => {
+    const input = canvasElement.querySelector('input');
+    if (input) {
+      input.dispatchEvent(new MouseEvent('mouseenter', { bubbles: true }));
+    }
+  },
+};
+
+export const Disabled = {
+  args: {
+    label: 'EMAIL',
+    placeholder: 'Select an option',
+    disabled: true,
   },
 };

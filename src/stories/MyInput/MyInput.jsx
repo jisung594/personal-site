@@ -12,6 +12,8 @@ export const MyInput = ({
   value,
   onChange,
   id,
+  error = false,
+  disabled = false,
   ...props
 }) => {
   const inputId = id || `my-input-${Math.random().toString(36).substring(2, 9)}`;
@@ -27,7 +29,8 @@ export const MyInput = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className={styles.inputField}
+        className={`${styles.inputField} ${error ? styles.error : ''} ${disabled ? styles.disabled : ''}`}
+        disabled={disabled}
         {...props}
       />
     </div>
@@ -40,7 +43,9 @@ MyInput.propTypes = {
   type: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
+  error: PropTypes.bool,
   id: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 MyInput.defaultProps = {
@@ -49,4 +54,5 @@ MyInput.defaultProps = {
   value: undefined, // allows controlled/uncontrolled behavior
   onChange: undefined,
   id: undefined,
+  disabled: false,
 };
