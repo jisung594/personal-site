@@ -11,8 +11,10 @@
   --space-6xl: 10rem;
   --space-7xl: 12rem;
   --space-8xl: 16rem;
-  --color-primary: #0066cc;
-  --color-secondary: #cc0066;
+  --color-blue-primary: #0066cc;
+  --color-blue-secondary: #E2F1FF;
+  --color-pink-primary: #cc0066;
+  --color-pink-secondary: #FFDEEF;
   --color-background: #f1f1f1;
   --color-gray-dark: #5a5a5a;
   --color-text: #1d1d1d;
