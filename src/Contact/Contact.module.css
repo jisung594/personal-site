@@ -72,7 +72,7 @@
 }
 
 .contactLink:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-blue-primary);
   transform: translateY(-2px);
   transition: transform 0.8s var(--ease-out);
 }
@@ -80,7 +80,7 @@
 .contactType {
   font-family: var(--font-heading);
   font-weight: var(--font-medium);
-  color: var(--color-secondary);
+  color: var(--color-pink-primary);
 }
 
 .contactValue {

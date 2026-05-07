@@ -45,7 +45,7 @@
   padding: var(--space-sm) var(--space-lg);
   cursor: pointer;
   text-align: center;
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-blue-primary);
   width: fit-content;
   min-width: 120px;
   box-sizing: border-box;
@@ -59,14 +59,14 @@
 }
 
 .liquidMorphText.button.primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-blue-primary);
   color: #ffffff;
 }
 
 .liquidMorphText.button.secondary {
   background-color: transparent;
-  color: var(--color-secondary);
-  border-color: var(--color-secondary);
+  color: var(--color-pink-primary);
+  border-color: var(--color-pink-primary);
 }
 
 .liquidMorphText.button.morphed {
@@ -83,12 +83,12 @@
 
 .liquidMorphText.button.primary.morphed:hover {
   background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: var(--color-blue-primary);
+  border-color: var(--color-blue-primary);
 }
 
 .liquidMorphText.button.secondary.morphed:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-pink-primary);
   color: #ffffff;
-  border-color: var(--color-secondary);
+  border-color: var(--color-pink-primary);
 }

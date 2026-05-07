@@ -97,7 +97,7 @@ nav {
 }
 
 .navLink:hover {
-  color: var(--color-primary);
+  color: var(--color-blue-primary);
 }
 
 /* Overrides the color to black for the MiniUiKit page */
