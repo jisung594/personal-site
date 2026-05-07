@@ -9,6 +9,7 @@ export const MyButton = ({
   label,
   className,
   href,
+  disabled = false,
   ...props
 }) => {
   const mode = primary ? styles.primary : styles.secondary;
@@ -16,7 +17,8 @@ export const MyButton = ({
   const ButtonElement = (
   <button
     type="button"
-    className={[styles.button, styles[size], mode, className].join(' ')}
+    className={[styles.button, styles[size], mode, className, disabled ? styles.disabled : ''].join(' ')}
+    disabled={disabled}
     {...props}
   >
     {label}
@@ -42,4 +44,13 @@ MyButton.propTypes = {
   className: PropTypes.string,
   href: PropTypes.string,
   onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+};
+
+MyButton.defaultProps = {
+  primary: false,
+  size: 'medium',
+  label: 'BUTTON',
+  onClick: undefined,
+  disabled: false,
 };

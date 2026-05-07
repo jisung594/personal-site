@@ -28,16 +28,47 @@ export const Secondary = {
   },
 };
 
-export const Large = {
+export const Focus = {
   args: {
-    size: 'large',
     label: 'BUTTON',
+    primary: true,
+  },
+  play: async ({ canvasElement }) => {
+    const button = canvasElement.querySelector('button');
+    if (button) {
+      button.focus();
+    }
   },
 };
 
-export const Small = {
+export const Hover = {
   args: {
-    size: 'small',
     label: 'BUTTON',
+  },
+  play: async ({ canvasElement }) => {
+    const button = canvasElement.querySelector('button');
+    if (button) {
+      // Add hover class to simulate hover state
+      button.classList.add('hover');
+    }
+  },
+};
+
+export const Disabled = {
+  args: {
+    label: 'BUTTON',
+    disabled: true,
+  },
+};
+
+export const Active = {
+  args: {
+    label: 'BUTTON',
+  },
+  play: async ({ canvasElement }) => {
+    const button = canvasElement.querySelector('button');
+    if (button) {
+      button.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
+    }
   },
 };

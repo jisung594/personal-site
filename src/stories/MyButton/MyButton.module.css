@@ -9,6 +9,8 @@
 	font-weight: var(--font-medium);
 	white-space: normal;
 	box-sizing: border-box;
+	line-height: 24px;
+	letter-spacing: 0.1em;
 }
 
 .button:active {
@@ -16,69 +18,69 @@
 }
 
 .primary {
-	background-color: var(--color-primary);
+	background-color: var(--color-blue-primary);
 	color: var(--color-background);
-	border: 2px solid transparent;
 }
 
 .primary:focus {
-	outline: 2px solid var(--color-primary);
-	outline-offset: 2px;
-	/* background-color: transparent; */
+	outline: 4px solid var(--color-blue-primary);
+	background-color: var(--color-white);
+	color: var(--color-blue-primary);
+	filter: drop-shadow(6px 6px 0 var(--color-blue-secondary));
 }
 
-.primary:hover {
-	box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-	background-color: var(--color-primary);
-	color: var(--color-background);
+.primary:hover,
+.button.primary.hover {
+	outline: 1px solid var(--color-blue-primary);
+	background-color: var(--color-blue-secondary);
+	color: var(--color-blue-primary);
 }
 
 .primary:active {
-	background-color: var(--color-primary);
-	color: var(--color-background);
+	outline: 1px solid var(--color-blue-primary);
+	background-color: var(--color-white);
+	color: var(--color-blue-primary);
 }
 
 .secondary {
-	border: 2px solid var(--color-secondary);
-	background-color: transparent;
-	color: var(--color-secondary);
+	background-color: var(--color-pink-primary);
+	color: var(--color-background);
 }
 
 .secondary:focus {
-	outline: 2px solid var(--color-secondary);
-	outline-offset: 2px;
-	background-color: transparent;
+	outline: 4px solid var(--color-pink-primary);
+	background-color: var(--color-white);
+	color: var(--color-pink-primary);
+	filter: drop-shadow(6px 6px 0 var(--color-blue-secondary));
 }
 
-.secondary:hover {
-	box-shadow: none;
-	background-color: var(--color-secondary);
-	color: var(--color-background);
+.secondary:hover,
+.button.secondary.hover {
+	outline: 1px solid var(--color-pink-primary);
+	background-color: var(--color-pink-secondary);
+	color: var(--color-pink-primary);
 }
 
 .secondary:active {
-	background-color: var(--color-secondary);
-	color: var(--color-background);
+	background-color: var(--color-white);
 }
 
 .disabled {
-	background-color: var(--color-gray-light);
-	color: var(--color-gray-dark);
+	background-color: var(--color-gray-dark);
+	color: var(--color-background);
 }
 
 .small {
-	padding: var(--space-xs) var(--space-md);
-	font-size: var(--text-sm);
+	padding: var(--space-sm) var(--space-md);
+	font-size: var(--text-base);
 }
 
 .medium {
 	padding: var(--space-sm) var(--space-lg);
 	font-size: var(--text-base);
-	line-height: 24px;
-	letter-spacing: 0.08em;
 }
 
 .large {
-	padding: var(--space-md) var(--space-xl);
+	padding: var(--space-md) var(--space-lg);
 	font-size: var(--text-lg);
 }
