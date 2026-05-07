@@ -30,14 +30,14 @@ export default {
     imageUrl: '',
     imageAlt: 'Placeholder image',
     ctaButtons: [
-      { label: 'CTA #1', onClick: fn() },
-      { label: 'CTA #2', onClick: fn() },
+      { primary: true, label: 'CTA #1', onClick: fn() },
+      { primary: true, label: 'CTA #2', onClick: fn() },
     ],
     onClick: fn(),
   },
 };
 
-export const VerticalClosed = {
+export const Default = {
   args: {
     variant: 'vertical',
     imageUrl: 'https://images.pexels.com/photos/6287295/pexels-photo-6287295.jpeg',
@@ -46,7 +46,7 @@ export const VerticalClosed = {
   },
 };
 
-export const VerticalOpen = {
+export const Open = {
   args: {
     variant: 'vertical',
     imageUrl: 'https://images.pexels.com/photos/6287295/pexels-photo-6287295.jpeg',
@@ -55,10 +55,59 @@ export const VerticalOpen = {
   },
 };
 
-export const VerticalNoImage = {
+export const DefaultNoImage = {
   args: {
     variant: 'vertical',
     imageUrl: '',
     imageAlt: 'No image available',
+  },
+};
+
+export const OpenNoImage = {
+  args: {
+    variant: 'vertical',
+    imageUrl: '',
+    imageAlt: 'No image available',
+    isInitiallyOpen: true,
+  },
+};
+
+export const Focus = {
+  args: {
+    variant: 'vertical',
+    imageUrl: 'https://images.pexels.com/photos/6287295/pexels-photo-6287295.jpeg',
+    imageAlt: 'Hands kneading dough',
+    isInitiallyOpen: false,
+  },
+  play: async ({ canvasElement }) => {
+    const card = canvasElement.querySelector('.myCard');
+    if (card) {
+      card.focus();
+    }
+  },
+};
+
+export const Hover = {
+  args: {
+    variant: 'vertical',
+    imageUrl: 'https://images.pexels.com/photos/6287295/pexels-photo-6287295.jpeg',
+    imageAlt: 'Hands kneading dough',
+    isInitiallyOpen: false,
+  },
+  play: async ({ canvasElement }) => {
+    const card = canvasElement.querySelector('.myCard');
+    if (card) {
+      card.dispatchEvent(new MouseEvent('mouseenter', { bubbles: true }));
+    }
+  },
+};
+
+export const Disabled = {
+  args: {
+    variant: 'vertical',
+    imageUrl: 'https://images.pexels.com/photos/6287295/pexels-photo-6287295.jpeg',
+    imageAlt: 'Hands kneading dough',
+    isInitiallyOpen: false,
+    disabled: true,
   },
 };

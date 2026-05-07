@@ -4,9 +4,6 @@
     box-sizing: border-box;
     width: 300px;
     height: fit-content;
-
-
-  /* transition: border-color 0.15s ease-out; */
 }
 
 .cardImageContainer {
@@ -35,11 +32,11 @@
 }
 
 .cardContent {
-    padding: 16px;
+    padding: var(--space-lg);
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
-    border: 2px solid var(--color-gray-dark);
+    gap: var(--space-lg);
+    border: 1px solid var(--color-text);
 }
 
 .cardHeader {
@@ -58,22 +55,22 @@
 .cardTitleAndSecondaryText {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
-    align-items: flex-start;
     flex-grow: 1;
+    gap: var(--space-md);
+    align-items: flex-start;
+    color: var(--color-text);
 }
 
 .cardTitle {
-    font-size: 18px;
+    font-size: var(--text-2xl);
     font-weight: bold;
-    color: var(--color-text);
     margin: 0;
     line-height: 1.2;
 }
 
 .secondaryText {
-    font-size: 14px;
-    color: var(--color-gray-dark);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
     margin: 0;
     line-height: 1.4;
 }
@@ -94,18 +91,17 @@
 .cardBody {
     display: flex;
     flex-direction: column;
-    gap: var(--space-lg);
-    padding: var(--space-md);
-    margin: calc(-1 * var(--space-md));
+    gap: var(--space-xl);
     margin-top: 0;
     box-sizing: border-box;
 }
 
 .cardBody .bodyText {
-    font-size: var(--text-sm);
-    color: var(--color-gray-dark);
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--color-text);
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .ctaButtonContainer {
@@ -123,28 +119,28 @@
 /* --- INTERACTIVE STATES FOR CARDS --- */
 
 .myCard:hover .cardContent {
-    border-color: var(--color-gray-light);
+    border-color: var(--color-blue-primary);
+    background-color: var(--color-blue-secondary);
 }
 
 .myCard:focus-within .cardContent {
-    border-color: var(--color-primary);
+    border-color: var(--color-blue-primary);
     outline: none;
 }
 
-.myCard:focus-within .cardTitle,
-.myCard:focus-within .secondaryText,
-.myCard:focus-within .dropdownArrow {
-    color: var(--color-primary);
+.myCard:focus-within .dropdownArrow,
+.myCard .cardHeader:focus .dropdownArrow {
+    color: var(--color-blue-primary);
 }
 
-.myCard--vertical .cardHeader:hover .cardTitle,
-.myCard--vertical .cardHeader:hover .secondaryText,
-.myCard--vertical .cardHeader:hover .dropdownArrow {
-    color: var(--color-primary);
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
-.myCard--vertical .cardHeader:focus .cardTitle,
-.myCard--vertical .cardHeader:focus .secondaryText,
-.myCard--vertical .cardHeader:focus .dropdownArrow {
-    color: var(--color-primary);
+.disabled:hover {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
 }

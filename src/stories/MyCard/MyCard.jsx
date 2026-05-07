@@ -17,6 +17,7 @@ export const MyCard = ({
   imageAlt,
   ctaButtons,
   isInitiallyOpen = false, // Only applies to vertical variant
+  disabled = false,
   onClick,
   ...props
 }) => {
@@ -28,7 +29,12 @@ export const MyCard = ({
     }
   };
 
-  const cardClasses = `${styles.myCard} ${styles[`myCard--${variant}`]} ${isOpen ? styles.myCardOpen : ''}`;
+  const cardClasses = [
+    styles.myCard,
+    styles[`myCard--${variant}`],
+    disabled ? styles.disabled : '',
+    isOpen ? styles.myCardOpen : ''
+  ].join(' ');
 
   const renderImage = () => (
     imageUrl && (
@@ -65,7 +71,6 @@ export const MyCard = ({
                   key={index}
                   label={button.label}
                   onClick={button.onClick}
-                  // TODO: pass 'variant' prop to MyButton for different button styles
                   primary={button.primary}
                 />
               ))}
@@ -98,6 +103,7 @@ MyCard.propTypes = {
     })
   ),
   isInitiallyOpen: PropTypes.bool,
+  disabled: PropTypes.bool,
   onClick: PropTypes.func,
 };
 
@@ -109,5 +115,6 @@ MyCard.defaultProps = {
   imageAlt: 'Card image',
   ctaButtons: [],
   isInitiallyOpen: false,
+  disabled: false,
   onClick: undefined,
 };
