@@ -43,7 +43,7 @@ export const On = {
 
 export const Focus = {
   args: {
-    initialState: false,
+    initialState: true,
   },
   play: async ({ canvasElement }) => {
     // Find the hidden input checkbox and programmatically focus it
@@ -51,5 +51,26 @@ export const Focus = {
     if (input) {
       input.focus();
     }
+  },
+};
+
+export const Hover = {
+  args: {
+    initialState: false,
+    label: 'Hover over this toggle',
+  },
+  play: async ({ canvasElement }) => {
+    const toggle = canvasElement.querySelector('.toggleWrapper');
+    if (toggle) {
+      toggle.dispatchEvent(new MouseEvent('mouseenter', { bubbles: true }));
+    }
+  },
+};
+
+export const Disabled = {
+  args: {
+    initialState: false,
+    label: 'Disabled Toggle',
+    disabled: true,
   },
 };

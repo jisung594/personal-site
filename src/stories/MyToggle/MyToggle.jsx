@@ -10,11 +10,13 @@ export const MyToggle = ({
   initialState = false,
   onToggle,
   label,
+  disabled = false,
   ...props
 }) => {
   const [isOn, setIsOn] = useState(initialState);
 
   const handleToggle = () => {
+    if (disabled) return;
     const newState = !isOn;
     setIsOn(newState);
     if (onToggle) {
@@ -25,7 +27,7 @@ export const MyToggle = ({
   const toggleText = isOn ? 'ON' : 'OFF';
 
   return (
-    <label className={styles.toggleWrapper} {...props}>
+    <label className={`${styles.toggleWrapper} ${disabled ? styles.disabled : ''}`} {...props}>
       {/* Hidden checkbox for accessibility and native form behavior */}
       <input
         type="checkbox"
@@ -35,6 +37,7 @@ export const MyToggle = ({
         role="switch" // ARIA role for accessibility
         aria-checked={isOn}
         aria-label={label || "Toggle switch"}
+        disabled={disabled}
       />
       <div className={styles.toggleContainer}>
         <div className={styles.toggleTrack}>
@@ -52,10 +55,12 @@ MyToggle.propTypes = {
   initialState: PropTypes.bool,
   onToggle: PropTypes.func,
   label: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 MyToggle.defaultProps = {
   initialState: false,
   onToggle: undefined,
   label: undefined,
+  disabled: false,
 };
