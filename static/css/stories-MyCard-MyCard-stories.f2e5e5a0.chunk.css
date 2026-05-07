@@ -1,0 +1,237 @@
+.MyCard_myCard__neQA1 {
+    font-family: var(--font-heading);
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    width: 300px;
+    height: fit-content;
+}
+
+.MyCard_cardImageContainer__bpBRd {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-light);
+}
+
+.MyCard_cardImage__5IpKg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.MyCard_cardImagePlaceholder__7kqHT {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-dark);
+}
+
+.MyCard_cardContent__eSYPp {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    border: 1px solid var(--color-text);
+}
+
+.MyCard_cardHeader__74zcV {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.MyCard_myCardOpen__gMSPT .MyCard_cardHeader__74zcV {
+    padding-bottom: var(--space-sm);
+}
+
+.MyCard_cardTitleAndSecondaryText__Il5G1 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--space-md);
+    align-items: flex-start;
+    color: var(--color-text);
+}
+
+.MyCard_cardTitle__w7OzP {
+    font-size: var(--text-2xl);
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.MyCard_secondaryText__101zj {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.MyCard_dropdownArrow__39yuq {
+    font-size: 16px;
+    color: var(--color-text);
+    transition: transform 0.2s ease-out;
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+
+.MyCard_dropdownArrowOpen__vNCsp {
+    transform: rotate(180deg);
+}
+
+/* Card Body (expanded content for vertical, always visible for horizontal) */
+.MyCard_cardBody__SPn99 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+.MyCard_cardBody__SPn99 .MyCard_bodyText__zWA-m {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.MyCard_ctaButtonContainer__7wAuo {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
+/* --- VERTICAL VARIANT SPECIFIC STYLES --- */
+.MyCard_myCard--vertical__7wiHF {
+    width: 300px;
+}
+
+
+/* --- INTERACTIVE STATES FOR CARDS --- */
+
+.MyCard_myCard__neQA1:hover .MyCard_cardContent__eSYPp {
+    border-color: var(--color-blue-primary);
+    background-color: var(--color-blue-secondary);
+}
+
+.MyCard_myCard__neQA1:focus-within .MyCard_cardContent__eSYPp {
+    border-color: var(--color-blue-primary);
+    outline: none;
+}
+
+.MyCard_myCard__neQA1:focus-within .MyCard_dropdownArrow__39yuq,
+.MyCard_myCard__neQA1 .MyCard_cardHeader__74zcV:focus .MyCard_dropdownArrow__39yuq {
+    color: var(--color-blue-primary);
+}
+
+.MyCard_disabled__MS0Zw {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.MyCard_disabled__MS0Zw:hover {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.MyButton_button__SGEvr {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+	border: 0;
+	font-family: var(--font-heading);
+	font-weight: var(--font-medium);
+	white-space: normal;
+	box-sizing: border-box;
+	line-height: 24px;
+	letter-spacing: 0.1em;
+	line-height: 24px;
+	letter-spacing: 0.1em;
+}
+
+.MyButton_button__SGEvr:active {
+  transform: scale(0.97);
+}
+
+.MyButton_primary__pw53k {
+	background-color: var(--color-blue-primary);
+	color: var(--color-background);
+}
+
+.MyButton_primary__pw53k:focus {
+	outline: 2px solid var(--color-blue-primary);
+	background-color: var(--color-white);
+	color: var(--color-blue-primary);
+	filter: drop-shadow(6px 6px 0 var(--color-blue-secondary));
+}
+
+.MyButton_primary__pw53k:hover,
+.MyButton_primary__pw53k.MyButton_hover__IcjPq {
+	outline: 1px solid var(--color-blue-primary);
+	background-color: var(--color-blue-secondary);
+	color: var(--color-blue-primary);
+}
+
+.MyButton_primary__pw53k:active {
+	outline: 1px solid var(--color-blue-primary);
+	background-color: var(--color-white);
+	color: var(--color-blue-primary);
+}
+
+.MyButton_secondary__ok8qX {
+	background-color: var(--color-pink-primary);
+	color: var(--color-background);
+}
+
+.MyButton_secondary__ok8qX:focus {
+	outline: 2px solid var(--color-pink-primary);
+	background-color: var(--color-white);
+	color: var(--color-pink-primary);
+	filter: drop-shadow(6px 6px 0 var(--color-blue-secondary));
+}
+
+.MyButton_secondary__ok8qX:hover,
+.MyButton_secondary__ok8qX.MyButton_hover__IcjPq {
+	outline: 1px solid var(--color-pink-primary);
+	background-color: var(--color-pink-secondary);
+	color: var(--color-pink-primary);
+}
+
+.MyButton_secondary__ok8qX:active {
+	background-color: var(--color-white);
+}
+
+.MyButton_disabled__Ik1BS {
+	background-color: var(--color-gray-dark);
+	color: var(--color-background);
+}
+
+.MyButton_small__xxMnh {
+	padding: var(--space-sm) var(--space-md);
+	font-size: var(--text-base);
+}
+
+.MyButton_medium__bq2xn {
+	padding: var(--space-sm) var(--space-lg);
+	font-size: var(--text-base);
+}
+
+.MyButton_large__M8sr3 {
+	padding: var(--space-md) var(--space-lg);
+	font-size: var(--text-lg);
+}
+
+
+/*# sourceMappingURL=stories-MyCard-MyCard-stories.f2e5e5a0.chunk.css.map*/

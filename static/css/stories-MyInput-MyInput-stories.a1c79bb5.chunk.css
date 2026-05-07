@@ -1,0 +1,80 @@
+.MyInput_inputWrapper__vnLWi {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  min-width: 300px;
+}
+
+.MyInput_label__tceMk {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.15s ease-out;
+}
+
+.MyInput_inputField__Q8Mck {
+  height: 100%;
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  line-height: var(--text-lg);
+  border: 1px solid var(--color-gray-dark);
+  background-color: transparent;
+  color: var(--color-text);
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  font-weight: var(--font-normal);
+  font-size: var(--text-base);
+  transition: border-color 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+.MyInput_inputField__Q8Mck::placeholder {
+  color: var(--color-gray-dark);
+  opacity: 0.6;
+}
+
+.MyInput_inputField__Q8Mck:hover {
+  border-color: var(--color-blue-primary);
+  background-color: var(--color-blue-secondary);
+}
+
+.MyInput_inputWrapper__vnLWi:hover .MyInput_label__tceMk {
+  color: var(--color-blue-primary);
+}
+
+.MyInput_inputField__Q8Mck:focus {
+  outline: none;
+  border: 2px solid var(--color-blue-primary);
+  border-color: var(--color-blue-primary);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  filter: drop-shadow(6px 6px 0 var(--color-blue-secondary));
+}
+
+.MyInput_inputField__Q8Mck:focus + .MyInput_label__tceMk,
+.MyInput_inputWrapper__vnLWi:focus-within .MyInput_label__tceMk {
+  color: var(--color-blue-primary);
+}
+
+.MyInput_error__7c7ss {
+  background-color: var(--color-pink-secondary);
+  border-color: var(--color-pink-primary);
+  border-width: 2px;
+}
+
+.MyInput_error__7c7ss:focus {
+  border-color: var(--color-pink-primary);
+  outline-color: var(--color-pink-primary);
+}
+
+.MyInput_disabled__v4cw5 {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--color-gray-light);
+  color: var(--color-gray-dark);
+}
+
+
+/*# sourceMappingURL=stories-MyInput-MyInput-stories.a1c79bb5.chunk.css.map*/
