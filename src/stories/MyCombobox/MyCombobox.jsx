@@ -13,6 +13,7 @@ export const MyCombobox = ({
   helpText,
   initialValue,
   onSelect,
+  disabled = false,
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,6 +56,7 @@ export const MyCombobox = ({
 
 
   const handleToggleDropdown = () => {
+    if (disabled) return;
     setIsOpen((prevIsOpen) => {
       const newIsOpen = !prevIsOpen;
       if (newIsOpen) {
@@ -70,6 +72,7 @@ export const MyCombobox = ({
   };
 
   const handleOptionClick = (optionLabel) => {
+    if (disabled) return;
     setSelectedValue(optionLabel);
     setIsOpen(false);
     if (onSelect) {
@@ -140,7 +143,7 @@ export const MyCombobox = ({
   const inputClasses = `${styles.comboboxInput} ${selectedValue ? styles.comboboxInputSelected : ''}`;
 
   return (
-    <div className={styles.comboboxWrapper} ref={comboboxRef} {...props}>
+    <div className={`${styles.comboboxWrapper} ${disabled ? styles.disabled : ''}`} ref={comboboxRef} {...props}>
       {label && (
         <label htmlFor="combobox-input" className={styles.label}>
           {label}
@@ -154,13 +157,15 @@ export const MyCombobox = ({
           value={selectedValue ? selectedValue : ''}
           placeholder={selectedValue ? '' : placeholder}
           readOnly
-          onClick={handleToggleDropdown}
-          onKeyDown={handleKeyDown}
+          disabled={disabled}
           ref={inputRef}
-          role="combobox"
+          onKeyDown={handleKeyDown}
+          onClick={handleToggleDropdown}
           aria-haspopup="listbox"
           aria-expanded={isOpen}
           aria-controls="combobox-options"
+          aria-activedescendant={focusedOptionIndex}
+          role="combobox"
           autoComplete="off"
         />
         {selectedValue && (
@@ -218,6 +223,7 @@ MyCombobox.propTypes = {
   helpText: PropTypes.string,
   initialValue: PropTypes.string,
   onSelect: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 
 MyCombobox.defaultProps = {
@@ -225,4 +231,5 @@ MyCombobox.defaultProps = {
   helpText: '',
   initialValue: '',
   onSelect: undefined,
+  disabled: false,
 };

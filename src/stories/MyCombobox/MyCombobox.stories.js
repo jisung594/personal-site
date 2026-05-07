@@ -29,7 +29,7 @@ export default {
   },
   args: {
     label: 'LABEL *',
-    placeholder: 'COMBOBOX',
+    placeholder: 'Select an option',
     options: sampleOptions,
     helpText: 'Help Text',
     onSelect: fn(),
@@ -63,7 +63,7 @@ export const WithLongOptions = {
       { label: 'Another significantly longer option for testing purposes', value: 'long2' },
       { label: 'Short option', value: 'short1' },
       { label: 'This is a medium length option', value: 'medium1' },
-      { label: 'Very very very very very very long option to test scrolling', value: 'long3' },
+      { label: 'Very very very very very long option to test scrolling', value: 'long3' },
       { label: 'Option 6', value: 'value6' },
       { label: 'Option 7', value: 'value7' },
       { label: 'Option 8', value: 'value8' },
@@ -76,5 +76,38 @@ export const WithLongOptions = {
     if (comboboxInput) {
       comboboxInput.click();
     }
+  },
+};
+
+export const Focus = {
+  args: {
+    options: sampleOptions,
+  },
+  play: async ({ canvasElement }) => {
+    const comboboxInput = canvasElement.querySelector('#combobox-input');
+    if (comboboxInput) {
+      comboboxInput.focus();
+    }
+  },
+};
+
+export const Hover = {
+  args: {
+    options: sampleOptions,
+    placeholder: 'Select an option',
+  },
+  play: async ({ canvasElement }) => {
+    const comboboxInput = canvasElement.querySelector('#combobox-input');
+    if (comboboxInput) {
+      comboboxInput.dispatchEvent(new MouseEvent('mouseenter', { bubbles: true }));
+    }
+  },
+};
+
+export const Disabled = {
+  args: {
+    options: sampleOptions,
+    placeholder: 'Disabled combobox',
+    disabled: true,
   },
 };

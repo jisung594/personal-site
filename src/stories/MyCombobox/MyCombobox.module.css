@@ -1,14 +1,14 @@
 /* Base styles for the combobox wrapper */
 .comboboxWrapper {
-    font-family: var(--font-heading);
-    width: 280px;
     position: relative;
+    min-width: 300px;
     box-sizing: border-box;
 }
 
 .label {
     display: block;
     margin-bottom: var(--space-sm);
+    font-family: var(--font-heading);
     font-size: var(--text-base);
     color: var(--color-text);
     text-transform: uppercase;
@@ -20,7 +20,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    border: 2px solid var(--color-gray-dark);
+    border: 1px solid var(--color-text);
     height: 40px;
     box-sizing: border-box;
     transition: border-color 0.15s ease-out;
@@ -28,14 +28,14 @@
 
 /* Combobox Input Field (main display area) */
 .comboboxInput {
-    font-family: var(--font-heading);
-    font-size: var(--text-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
     flex-grow: 1; /* Takes up available space */
-    padding: var(--space-md) var(--space-sm);
+    padding: var(--space-md) var(--space-md);
     line-height: 24px;
     border: none;
     outline: none;
-    background-color: #FFFFFF;
+    background-color: var(--color-white);
     color: var(--color-text);
     cursor: pointer;
     box-sizing: border-box;
@@ -50,41 +50,39 @@
 
 /* Styling for input when an option is selected */
 .comboboxInputSelected {
-    background-color: var(--color-gray-light);
+    background-color: var(--color-background);
     color: var(--color-text);
 }
 
 /* Clear button (x icon) */
 .clearButton {
-    /* background: none; */
     border: none;
     color: var(--color-text);
-    background-color: var(--color-gray-light);
+    background-color: var(--color-background);
     font-size: 16px;
     cursor: pointer;
-    padding: 0 8px;
+    padding: var(--space-md);
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: color 0.15s ease-out;
-    margin-left: -1px;
 
 }
 
 /* Clear button hover/focus state */
 .clearButton:hover,
 .clearButton:focus {
-    color: var(--color-primary);
+    color: var(--color-blue-primary);
     outline: none;
 }
 
 /* Dropdown toggle button (arrow icon) */
 .dropdownButton {
-    background-color: var(--color-gray-dark);
+    background-color: var(--color-blue-primary);
     border: none;
     height: 100%;
-    width: 40px;
+    padding: 0 var(--space-md);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +91,7 @@
 }
 
 .dropdownArrow {
-    color: #FFFFFF;
+    color: var(--color-white);
     font-size: var(--text-base);
     line-height: 1;
     transition: transform 0.2s ease-out, color 0.15s ease-out;
@@ -117,13 +115,12 @@
     right: 0;
     z-index: 100;
     background-color: var(--color-gray-light);
-    border: 2px solid var(--color-primary);
+    border: 1px solid var(--color-blue-primary);
     list-style: none;
     padding: 0;
     margin: 0;
     max-height: 200px;
     overflow-y: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Custom scrollbar for Webkit browsers */
@@ -143,8 +140,8 @@
 
 /* Dropdown options */
 .dropdownOption {
-    font-family: var(--font-heading);
-    font-size: var(--text-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
     font-weight: var(--font-medium);
     padding: var(--space-sm) var(--space-md);
     background-color: #FFFFFF;
@@ -160,7 +157,7 @@
 
 .dropdownOption:hover,
 .dropdownOptionFocused {
-    background-color: var(--color-gray-light);
+    background-color: var(--color-blue-secondary);
 }
 
 
@@ -170,25 +167,41 @@
 .inputContainer:focus-within,
 .comboboxWrapper:hover .inputContainer,
 .comboboxWrapper.dropdownOpen .inputContainer {
-    border-color: var(--color-primary);
+    border-color: var(--color-blue-primary);
 }
 
 .comboboxWrapper:hover .label,
 .comboboxWrapper.dropdownOpen .label {
-    color: var(--color-primary);
+    color: var(--color-blue-primary);
 }
 
 .comboboxWrapper:hover .dropdownButton,
 .comboboxWrapper.dropdownOpen .dropdownButton {
-    background-color: var(--color-primary);
+    background-color: var(--color-blue-secondary);
 }
 
 .comboboxWrapper:hover .dropdownButton .dropdownArrow,
 .comboboxWrapper.dropdownOpen .dropdownButton .dropdownArrow {
-    color: #FFFFFF;
+    color: var(--color-blue-primary);
 }
 
 .comboboxWrapper:hover .clearButton:hover,
 .comboboxWrapper.dropdownOpen .clearButton:hover {
-    color: var(--color-primary);
+    color: var(--color-blue-primary);
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.disabled .inputField {
+    background-color: var(--color-gray-light);
+    color: var(--color-gray-dark);
+}
+
+.disabled .dropdownButton {
+    background-color: var(--color-gray-light);
+    cursor: not-allowed;
 }
