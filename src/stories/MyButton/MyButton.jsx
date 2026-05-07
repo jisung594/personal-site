@@ -46,11 +46,3 @@ MyButton.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
 };
-
-MyButton.defaultProps = {
-  primary: false,
-  size: 'medium',
-  label: 'BUTTON',
-  onClick: undefined,
-  disabled: false,
-};

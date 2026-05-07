@@ -124,8 +124,8 @@ export const MiniUiKit = ({ ...props }) => {
             imageUrl={`${process.env.PUBLIC_URL}/images/jona.jpeg`}
             imageAlt={'Guy holding double thumbs up by Lake Michigan'}
             ctaButtons={[
-              { primary: true, label: 'CTA #1'},
-              { primary: true, label: 'CTA #2'},
+              { primary: true, label: 'CTA #1', onClick: () => console.log('CTA #1 clicked') },
+              { primary: true, label: 'CTA #2', onClick: () => console.log('CTA #2 clicked') },
             ]}
           />
           {/* Card without an image */}
@@ -136,8 +136,8 @@ export const MiniUiKit = ({ ...props }) => {
             imageUrl={''}
             imageAlt={'No image provided'}
             ctaButtons={[
-              { primary: true, label: 'CTA #1'},
-              { label: 'CTA #2'},
+              { primary: true, label: 'CTA #1', onClick: () => console.log('CTA #1 clicked') },
+              { label: 'CTA #2', onClick: () => console.log('CTA #2 clicked') },
             ]}
           />
         </div>

@@ -225,11 +225,3 @@ MyCombobox.propTypes = {
   onSelect: PropTypes.func,
   disabled: PropTypes.bool,
 };
-
-MyCombobox.defaultProps = {
-  placeholder: 'Select an option',
-  helpText: '',
-  initialValue: '',
-  onSelect: undefined,
-  disabled: false,
-};

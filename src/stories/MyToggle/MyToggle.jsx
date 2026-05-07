@@ -57,10 +57,3 @@ MyToggle.propTypes = {
   label: PropTypes.string,
   disabled: PropTypes.bool,
 };
-
-MyToggle.defaultProps = {
-  initialState: false,
-  onToggle: undefined,
-  label: undefined,
-  disabled: false,
-};

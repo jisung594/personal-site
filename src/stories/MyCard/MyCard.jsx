@@ -106,15 +106,3 @@ MyCard.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
 };
-
-MyCard.defaultProps = {
-  variant: 'vertical',
-  secondaryText: '',
-  bodyText: '',
-  imageUrl: '',
-  imageAlt: 'Card image',
-  ctaButtons: [],
-  isInitiallyOpen: false,
-  disabled: false,
-  onClick: undefined,
-};

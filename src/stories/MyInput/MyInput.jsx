@@ -47,12 +47,3 @@ MyInput.propTypes = {
   id: PropTypes.string,
   disabled: PropTypes.bool,
 };
-
-MyInput.defaultProps = {
-  placeholder: '',
-  type: 'text',
-  value: undefined, // allows controlled/uncontrolled behavior
-  onChange: undefined,
-  id: undefined,
-  disabled: false,
-};
