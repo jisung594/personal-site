@@ -2,7 +2,7 @@
     font-family: var(--font-heading);
     background-color: #FFFFFF;
     box-sizing: border-box;
-    width: 300px;
+    width: 100%;
     height: fit-content;
 }
 
@@ -108,11 +108,6 @@
     display: flex;
     gap: var(--space-sm);
     flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
-}
-
-/* --- VERTICAL VARIANT SPECIFIC STYLES --- */
-.MyCard_myCard--vertical__7wiHF {
-    width: 300px;
 }
 
 
@@ -234,4 +229,4 @@
 }
 
 
-/*# sourceMappingURL=stories-MyCard-MyCard-stories.f2e5e5a0.chunk.css.map*/
+/*# sourceMappingURL=stories-MyCard-MyCard-stories.90eca269.chunk.css.map*/
