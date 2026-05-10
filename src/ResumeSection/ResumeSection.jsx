@@ -6,7 +6,7 @@ export const ResumeSection = () => {
   return (
     <section className={styles.resumeSection}>
       <div className={styles.resumeContainer}>
-        <h2 className={styles.resumeTitle}>Resume</h2>
+        <h2 className={styles.resumeTitle}>RESUME</h2>
 
         <div className={styles.resumeContent}>
           <p className={styles.resumeDescription}>Choose your preferred format:</p>

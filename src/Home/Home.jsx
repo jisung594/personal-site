@@ -44,7 +44,7 @@ const stepData = [
     imageUrl: null,
   },
   {
-    heading: 'THANK YOU',
+    caption: 'Thank you !',
     background: '#f1f1f1',
     darkmode: false,
     imageUrl: null,

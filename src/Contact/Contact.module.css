@@ -23,8 +23,8 @@
 
 .title {
   font-family: var(--font-heading);
-  font-size: var(--text-3xl);
-  font-weight: var(--font-normal);
+  font-size: var(--text-5xl);
+  letter-spacing: 0.04em;
   padding-bottom: var(--space-sm);
   width: fit-content;
   margin: 0;
