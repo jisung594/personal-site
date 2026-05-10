@@ -1,0 +1,91 @@
+.MyButton_button__SGEvr {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+	border: 0;
+	font-family: var(--font-heading);
+	font-weight: var(--font-medium);
+	white-space: normal;
+	box-sizing: border-box;
+	line-height: 24px;
+	letter-spacing: 0.1em;
+	line-height: 24px;
+	letter-spacing: 0.1em;
+}
+
+.MyButton_button__SGEvr:active {
+  transform: scale(0.97);
+}
+
+.MyButton_primary__pw53k {
+	background-color: var(--color-blue-primary);
+	color: var(--color-background);
+}
+
+.MyButton_primary__pw53k:focus {
+	outline: 2px solid var(--color-blue-primary);
+	background-color: var(--color-white);
+	color: var(--color-blue-primary);
+	filter: drop-shadow(6px 6px 0 var(--color-blue-secondary));
+}
+
+.MyButton_primary__pw53k:hover,
+.MyButton_primary__pw53k.MyButton_hover__IcjPq {
+	outline: 1px solid var(--color-blue-primary);
+	background-color: var(--color-blue-secondary);
+	color: var(--color-blue-primary);
+}
+
+.MyButton_primary__pw53k:active {
+	outline: 1px solid var(--color-blue-primary);
+	background-color: var(--color-white);
+	color: var(--color-blue-primary);
+}
+
+.MyButton_secondary__ok8qX {
+	background-color: var(--color-pink-primary);
+	color: var(--color-background);
+}
+
+.MyButton_secondary__ok8qX:focus {
+	outline: 2px solid var(--color-pink-primary);
+	background-color: var(--color-white);
+	color: var(--color-pink-primary);
+	filter: drop-shadow(6px 6px 0 var(--color-blue-secondary));
+}
+
+.MyButton_secondary__ok8qX:hover,
+.MyButton_secondary__ok8qX.MyButton_hover__IcjPq {
+	outline: 1px solid var(--color-pink-primary);
+	background-color: var(--color-pink-secondary);
+	color: var(--color-pink-primary);
+}
+
+.MyButton_secondary__ok8qX:active {
+	background-color: var(--color-white);
+}
+
+.MyButton_disabled__Ik1BS {
+	background-color: var(--color-gray-dark);
+	color: var(--color-background);
+}
+
+.MyButton_small__xxMnh {
+	padding: var(--space-sm) var(--space-md);
+	font-size: var(--text-base);
+}
+
+.MyButton_medium__bq2xn {
+	padding: var(--space-sm) var(--space-lg);
+	font-size: var(--text-base);
+}
+
+.MyButton_large__M8sr3 {
+	padding: var(--space-md) var(--space-lg);
+	font-size: var(--text-lg);
+}
+
+
+/*# sourceMappingURL=stories-MyButton-MyButton-stories.430c7f8f.chunk.css.map*/
