@@ -70,78 +70,86 @@ export const MiniUiKit = ({ ...props }) => {
 
   return (
     <div className={styles.MiniUiKit}>
-      {/* Container for the UI Kit. Each section now has a ref and a dynamic class for the transition. */}
+      {/* Header */}
+      <header>
+        <h1 className={styles.pageTitle}>Design System</h1>
+      </header>
+      
+      {/* Main content */}
+      <main>
+        {/* Container for the UI Kit. Each section now has a ref and a dynamic class for the transition. */}
 
-      <div ref={sectionRefs.buttons} data-section="buttons" className={getSectionClass('buttons')}>
-        <h2 className={styles.sectionTitle}>Buttons</h2>
-        <div className={styles.buttonsContainer}>
-          <MyButton label="CANCEL"></MyButton>
-          <MyButton primary={true} label="PUBLISH"></MyButton>
+        <div ref={sectionRefs.buttons} data-section="buttons" className={getSectionClass('buttons')}>
+          <h2 className={styles.sectionTitle}>Button</h2>
+          <div className={styles.buttonsContainer}>
+            <MyButton primary={true} label="PUBLISH"></MyButton>
+            <MyButton label="CANCEL"></MyButton>
+          </div>
         </div>
-      </div>
 
-      <div ref={sectionRefs.inputs} data-section="inputs" className={getSectionClass('inputs')}>
-        <h2 className={styles.sectionTitle}>Input</h2>
-        <div className={styles.inputsContainer}>
-          <MyInput placeholder={'yourname@example.com'} label={'EMAIL'} />
-          <MyInput placeholder={'********'} label={'PASSWORD'} type={'password'} />
+        <div ref={sectionRefs.inputs} data-section="inputs" className={getSectionClass('inputs')}>
+          <h2 className={styles.sectionTitle}>Input</h2>
+          <div className={styles.inputsContainer}>
+            <MyInput placeholder={'yourname@example.com'} label={'EMAIL'} />
+            <MyInput placeholder={'********'} label={'PASSWORD'} type={'password'} />
+          </div>
         </div>
-      </div>
 
-      <div ref={sectionRefs.toggles} data-section="toggles" className={getSectionClass('toggles')}>
-        <h2 className={styles.sectionTitle}>Toggle</h2>
-        <div className={styles.togglesContainer}>
-          <MyToggle initialState={false} label={'TOGGLE'} />
+        <div ref={sectionRefs.toggles} data-section="toggles" className={getSectionClass('toggles')}>
+          <h2 className={styles.sectionTitle}>Toggle</h2>
+          <div className={styles.togglesContainer}>
+            <MyToggle initialState={false} label={'TOGGLE'} />
+          </div>
         </div>
-      </div>
 
-      <div ref={sectionRefs.combobox} data-section="combobox" className={getSectionClass('combobox')}>
-        <h2 className={styles.sectionTitle}>Combobox</h2>
-        <div className={styles.comboboxContainer}>
-          <MyCombobox
-            label={'T-SHIRT SIZE'}
-            placeholder={'Select an option'}
-            options={[
-              { label: 'X-Small', value: 'value1' },
-              { label: 'Small', value: 'value2' },
-              { label: 'Medium', value: 'value3' },
-              { label: 'Large', value: 'value4' },
-              { label: 'X-Large', value: 'value5' },
-            ]}
-            helpText={'Not sure? See our size chart.'}
-          />
+        <div ref={sectionRefs.combobox} data-section="combobox" className={getSectionClass('combobox')}>
+          <h2 className={styles.sectionTitle}>Combobox</h2>
+          <div className={styles.comboboxContainer}>
+            <MyCombobox
+              label={'T-SHIRT SIZE'}
+              placeholder={'Select an option'}
+              options={[
+                { label: 'X-Small', value: 'value1' },
+                { label: 'Small', value: 'value2' },
+                { label: 'Medium', value: 'value3' },
+                { label: 'Large', value: 'value4' },
+                { label: 'X-Large', value: 'value5' },
+              ]}
+              helpText={'Not sure? See our size chart.'}
+            />
+          </div>
         </div>
-      </div>
 
-      <div ref={sectionRefs.cards} data-section="cards" className={getSectionClass('cards')}>
-        <h2 className={styles.sectionTitle}>Cards</h2>
-        <div className={styles.cardsContainer}>
-          {/* Card with an image */}
-          <MyCard
-            title={'Jonathan Choi'}
-            secondaryText={'Engineer'}
-            bodyText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida vestibulum ante vel pulvinar.'}
-            imageUrl={`${process.env.PUBLIC_URL}/images/jona.jpeg`}
-            imageAlt={'Guy holding double thumbs up by Lake Michigan'}
-            ctaButtons={[
-              { primary: true, label: 'CTA #1', onClick: () => console.log('CTA #1 clicked') },
-              { primary: true, label: 'CTA #2', onClick: () => console.log('CTA #2 clicked') },
-            ]}
-          />
-          {/* Card without an image */}
-          <MyCard
-            title={'Card Title w/o image'}
-            secondaryText={'Secondary Text'}
-            bodyText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida vestibulum ante vel pulvinar.'}
-            imageUrl={''}
-            imageAlt={'No image provided'}
-            ctaButtons={[
-              { primary: true, label: 'CTA #1', onClick: () => console.log('CTA #1 clicked') },
-              { label: 'CTA #2', onClick: () => console.log('CTA #2 clicked') },
-            ]}
-          />
+        <div ref={sectionRefs.cards} data-section="cards" className={getSectionClass('cards')}>
+          <h2 className={styles.sectionTitle}>Card</h2>
+          <div className={styles.cardsContainer}>
+            {/* Card with an image */}
+            <MyCard
+              title={'Jonathan Choi'}
+              secondaryText={'Engineer'}
+              bodyText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida vestibulum ante vel pulvinar.'}
+              imageUrl={`${process.env.PUBLIC_URL}/images/jona.jpeg`}
+              imageAlt={'Guy holding double thumbs up by Lake Michigan'}
+              ctaButtons={[
+                { primary: true, label: 'CTA #1', onClick: () => console.log('CTA #1 clicked') },
+                { primary: true, label: 'CTA #2', onClick: () => console.log('CTA #2 clicked') },
+              ]}
+            />
+            {/* Card without an image */}
+            <MyCard
+              title={'Card Title w/o image'}
+              secondaryText={'Secondary Text'}
+              bodyText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida vestibulum ante vel pulvinar.'}
+              imageUrl={''}
+              imageAlt={'No image provided'}
+              ctaButtons={[
+                { primary: true, label: 'CTA #1', onClick: () => console.log('CTA #1 clicked') },
+                { label: 'CTA #2', onClick: () => console.log('CTA #2 clicked') },
+              ]}
+            />
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

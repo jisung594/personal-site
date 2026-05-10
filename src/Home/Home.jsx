@@ -32,11 +32,11 @@ const stepData = [
     imageUrl: null,
   },
   {
-    heading: 'Mini UI Kit',
-    paragraph: `A compact design system, showcasing UI components and development patterns. Built with React and Storybook for interactive exploration and documentation.`,
+    heading: 'DESIGN SYSTEM',
+    paragraph: `A design system with a live Figma → Style Dictionary → CSS token pipeline. Documented in Storybook across states, variants, and edge cases.`,
     links: [
       { primary: false, label: 'VIEW', href: '/mini-ui-kit' },
-      { primary: true, label: 'FIGMA', href: 'https://www.figma.com/design/iUEUiDkx3jtnYPtJyTNjjE/Mini-Component-Library?node-id=490-189' },
+      { primary: true, label: 'FIGMA', href: 'https://www.figma.com/design/iUEUiDkx3jtnYPtJyTNjjE/Mini-Component-Library?node-id=486-73&t=vcvNskkTNl2qZAxe-1' },
       { primary: true, label: 'STORYBOOK', href: 'https://jisungchoi.com/storybook' }
     ],
     background: '#f1f1f1',
@@ -44,7 +44,7 @@ const stepData = [
     imageUrl: null,
   },
   {
-    heading: 'Thank you!',
+    heading: 'THANK YOU',
     background: '#f1f1f1',
     darkmode: false,
     imageUrl: null,

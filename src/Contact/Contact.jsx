@@ -9,9 +9,6 @@ export const Contact = ({ ...props }) => {
         <div className={styles.header}>
           <p className={styles.subtitle}>
             I combine design thinking with engineering execution to build effective user experiences.
-          </p>
-          <br/>
-          <p className={styles.subtitle}>
             Looking forward to discussing how I can contribute to your team!
           </p>
         </div>

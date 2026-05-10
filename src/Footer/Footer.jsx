@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import logoUrl from '../assets/logo_white.png';
 
@@ -23,11 +24,11 @@ export const Footer = () => {
         </div>
         <div>
           <nav className={styles.footerNav}>
-            <a href="/">HOME</a>
+            <Link to="/">HOME</Link>
             <span className={styles.divider}>|</span>
-            <a href="/about">ABOUT</a>
+            <Link to="/about">ABOUT</Link>
             <span className={styles.divider}>|</span>
-            <a href="/contact">CONTACT</a>
+            <Link to="/contact">CONTACT</Link>
           </nav>
         </div>
 
