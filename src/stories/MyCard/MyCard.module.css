@@ -2,7 +2,7 @@
     font-family: var(--font-heading);
     background-color: #FFFFFF;
     box-sizing: border-box;
-    width: 300px;
+    width: 100%;
     height: fit-content;
 }
 
@@ -108,11 +108,6 @@
     display: flex;
     gap: var(--space-sm);
     flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
-}
-
-/* --- VERTICAL VARIANT SPECIFIC STYLES --- */
-.myCard--vertical {
-    width: 300px;
 }
 
 

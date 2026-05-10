@@ -5,6 +5,8 @@
   color: #FFFFFF;
   background-color: #000000;
   padding: var(--space-lg) var(--space-xl);
+  position: relative;
+  z-index: 10;
 }
 
 .footerContent {

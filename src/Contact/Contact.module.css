@@ -8,7 +8,7 @@
   flex-direction: column;
   box-sizing: border-box;
   background-color: var(--color-background);
-  padding: var(--space-6xl) var(--space-2xl);
+  padding: var(--space-6xl) var(--space-lg);
 }
 
 .container {
@@ -18,14 +18,13 @@
 }
 
 .header {
-  max-width: 600px;
+  max-width: 60%;
 }
 
 .title {
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   font-weight: var(--font-normal);
-  border-bottom: 1px dashed var(--color-gray-light);
   padding-bottom: var(--space-sm);
   width: fit-content;
   margin: 0;
@@ -49,7 +48,11 @@
   flex-direction: column;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-md);
-  border: 1px dashed var(--color-gray-light);
+  background-color: var(--color-background);
+  border: 2px solid var(--color-white);
+  border-radius: var(--space-xs);
+  filter: drop-shadow(6px 6px 0 var(--color-white));
+  max-width: 60%;
 }
 
 .contactLink {
@@ -59,7 +62,7 @@
   padding: var(--space-md) var(--space-lg);
   color: var(--color-text);
   cursor: pointer;
-  border-bottom: 1px dashed var(--color-gray-light); /* Separator between options */
+  border-bottom: 2px solid var(--color-white); /* Separator between options */
   transition: background-color 0.8s var(--ease-out), color 0.8s var(--ease-out);
   font-family: var(--font-body);
   font-size: var(--text-base);
@@ -94,8 +97,14 @@
   color: #FFFFFF;
 }
 
-/* Mobile styles */
+
+
+/* Tablet styles */
 @media (max-width: 768px) {
+  .fullHeight {
+    padding: var(--space-6xl) var(--space-2xl);
+  }
+
   .title {
     font-size: var(--text-2xl);
   }
@@ -110,8 +119,8 @@
 }
 
 /* Desktop styles */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .fullHeight {
-    padding: var(--space-7xl);
+    padding: var(--space-6xl) var(--space-6xl);
   }
 }
