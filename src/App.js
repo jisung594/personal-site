@@ -94,7 +94,13 @@ const AppContent = () => {
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL || ''}>
+    <BrowserRouter 
+      basename={process.env.PUBLIC_URL || ''}
+      future={{ 
+        v7_relativeSplatPath: true,
+        v7_startTransition: true 
+      }}
+    >
       <AppContent />
     </BrowserRouter>
   );
