@@ -9,6 +9,7 @@ const preview = {
        date: /Date$/i,
       },
     },
+    viewMode: 'story',
   },
 };
 
