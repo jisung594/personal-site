@@ -25,7 +25,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "predeploy-storybook": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static",
+    "deploy-storybook": "gh-pages -d storybook-static --branch gh-pages-storybook --dest storybook",
     "build-tokens": "node build-tokens.js"
   },
   "eslintConfig": {
