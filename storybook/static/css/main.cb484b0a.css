@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Archivo';
+  src: url(../../4d0b389e0ea0dd5bb350.woff2) format('woff2'), /* Super Modern Browsers */
+       url(../../9a9a53849b36a7c920f9.woff) format('woff'), /* Pretty Modern Browsers */
+       url(../../1b07e9704c1b3887e468.ttf) format('truetype'), /* Safari, Android, iOS */
+       url(../../7041d11ac1068e5e730a.svg#svgFontName) format('svg'); /* Legacy iOS */
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url(../../6795d52d4c60240408d6.woff2) format('woff2'), /* Super Modern Browsers */
+       url(../../f9fa7c331e7c1e655c44.woff) format('woff'), /* Pretty Modern Browsers */
+       url(../../72e2ac46752cd549224f.ttf) format('truetype'), /* Safari, Android, iOS */
+       url(../../9e3f2ae3dcd5370eb3c7.svg#svgFontName) format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url(../../8a9fd1e7d8cd389e4483.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  --space-6xl: 10rem;
+  --space-7xl: 12rem;
+  --space-8xl: 16rem;
+  --color-blue-primary: #0066cc;
+  --color-blue-secondary: #E2F1FF;
+  --color-pink-primary: #cc0066;
+  --color-pink-secondary: #FFDEEF;
+  --color-background: #f1f1f1;
+  --color-gray-dark: #5a5a5a;
+  --color-text: #1d1d1d;
+  --color-gray-light: #c9c9c9;
+  --color-white: #ffffff;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Archivo', serif;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Oswald', 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/*# sourceMappingURL=main.cb484b0a.css.map*/
