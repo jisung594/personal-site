@@ -2,7 +2,7 @@
     font-family: var(--font-heading);
     background-color: #FFFFFF;
     box-sizing: border-box;
-    width: 100%;
+    min-width: 360px;
     height: fit-content;
 }
 
@@ -102,6 +102,7 @@
     color: var(--color-text);
     margin: 0;
     line-height: 1.5;
+    width: 300px;
 }
 
 .MyCard_ctaButtonContainer__7wAuo {
@@ -234,4 +235,4 @@
 }
 
 
-/*# sourceMappingURL=stories-MyCard-MyCard-stories.6734e36a.chunk.css.map*/
+/*# sourceMappingURL=stories-MyCard-MyCard-stories.af110127.chunk.css.map*/

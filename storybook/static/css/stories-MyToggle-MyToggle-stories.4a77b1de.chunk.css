@@ -1,4 +1,11 @@
 /* Base styles for the entire toggle wrapper (label for accessibility) */
+
+.MyToggle_toggle__HBrs0 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .MyToggle_toggleWrapper__Sn1mR {
   display: inline-block;
   position: relative;
@@ -135,4 +142,4 @@
 }
 
 
-/*# sourceMappingURL=stories-MyToggle-MyToggle-stories.a048dc87.chunk.css.map*/
+/*# sourceMappingURL=stories-MyToggle-MyToggle-stories.4a77b1de.chunk.css.map*/
