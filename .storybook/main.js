@@ -13,7 +13,14 @@ const config = {
     "options": {}
   },
   "staticDirs": [
-    "../public"
-  ]
+    { 
+      from: "../public",
+      to: "static",
+      exclude: ["404.html"]
+    }
+  ],
+  "docs": {
+    "autodocs": true
+  }
 };
 export default config;
