@@ -23,6 +23,7 @@
   font-size: var(--text-lg);
   line-height: 1.6;
   margin: 0;
+  width: 100%;
 }
 
 .location {
@@ -41,7 +42,6 @@
   font-family: var(--font-heading);
   font-size: var(--text-5xl);
   letter-spacing: 0.04em;
-  padding-bottom: var(--space-sm);
   width: fit-content;
   margin: 0;
   margin-bottom: var(--space-lg);
@@ -95,6 +95,10 @@
 @media (min-width: 768px) {
   .fullHeight {
     padding: var(--space-6xl) var(--space-6xl);
+  }
+
+  .bio {
+    width: 50%;
   }
 }
 

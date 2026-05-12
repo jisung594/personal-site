@@ -16,7 +16,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--space-xl);
-    align-items: flex-start;
 }
 
 .pageTitle {
@@ -32,33 +31,25 @@
 .section {
     /* flex: 1 1 300px; */
     padding: var(--space-xl);
-    background-color: var(--color-background);
+    background-color: #ededed;
     border: 2px solid var(--color-white);
     border-radius: var(--space-xs);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    opacity: 0;
-    transform: translateY(2rem) scale(0.95);
     filter: drop-shadow(6px 6px 0 var(--color-white));
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
 }
 
 /* Section titles */
 .sectionTitle {
-    font-size: var(--text-base);
-    font-weight: 400;
+    font-size: var(--text-sm);
+    font-weight: var(--font-normal);
     margin-top: 0;
     margin-bottom: var(--space-xl);
-    color: var(--color-gray-dark);
+    color: var(--color-text);
 }
 
 /* Component containers */
 .buttonsContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
@@ -69,46 +60,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 0 1rem;
-}
-
-.inputsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: var(--space-lg);
 }
 
+.togglesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .cardsContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: var(--space-xl);
 }
 
-/* Responsive Design */
+@media (min-width: 769px) {
+    .cardsContainer {
+        flex-direction: row;
+    }
+}
+
 @media (max-width: 768px) {
     .MiniUiKit {
-        padding: var(--space-xl);
+        padding: var(--space-4xl) var(--space-2xl);
         margin-top: 60px; /* Smaller header on mobile */
-    }
-    
-    .MiniUiKit main {
-        flex-direction: column;
-    }
-    
-    .section {
-        flex: 1 1 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .MiniUiKit {
-        padding: var(--space-lg);
-        margin-top: 50px; /* Even smaller header on small screens */
+    .MiniUiKit main {
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
-    
+
     .section {
         padding: var(--space-lg);
     }

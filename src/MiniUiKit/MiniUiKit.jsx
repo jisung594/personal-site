@@ -82,7 +82,7 @@ export const MiniUiKit = ({ ...props }) => {
         <div ref={sectionRefs.buttons} data-section="buttons" className={getSectionClass('buttons')}>
           <h2 className={styles.sectionTitle}>Button</h2>
           <div className={styles.buttonsContainer}>
-            <MyButton primary={true} label="PUBLISH"></MyButton>
+            <MyButton primary={true} label="SUBMIT"></MyButton>
             <MyButton label="CANCEL"></MyButton>
           </div>
         </div>

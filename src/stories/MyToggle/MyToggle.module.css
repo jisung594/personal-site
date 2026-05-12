@@ -1,4 +1,11 @@
 /* Base styles for the entire toggle wrapper (label for accessibility) */
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .toggleWrapper {
   display: inline-block;
   position: relative;

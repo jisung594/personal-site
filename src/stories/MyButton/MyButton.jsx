@@ -25,13 +25,24 @@ export const MyButton = ({
   </button>
 );
 
-  // If href is provided, wrap in Link for navigation
+  // If href is provided, wrap in appropriate element for navigation
   if (href) {
-    return (
-      <Link to={href}>
-        {ButtonElement}
-      </Link>
-    );
+    // Check if href is external URL
+    const isExternal = href.startsWith('http') || href.startsWith('//');
+    
+    if (isExternal) {
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={styles.linkWrapper}>
+          {ButtonElement}
+        </a>
+      );
+    } else {
+      return (
+        <Link to={href}>
+          {ButtonElement}
+        </Link>
+      );
+    }
   }
 
   return ButtonElement;

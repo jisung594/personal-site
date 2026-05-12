@@ -143,70 +143,72 @@ export const MyCombobox = ({
   const inputClasses = `${styles.comboboxInput} ${selectedValue ? styles.comboboxInputSelected : ''}`;
 
   return (
-    <div className={`${styles.comboboxWrapper} ${disabled ? styles.disabled : ''}`} ref={comboboxRef} {...props}>
-      {label && (
-        <label htmlFor="combobox-input" className={styles.label}>
-          {label}
-        </label>
-      )}
-      <div className={styles.inputContainer}>
-        <input
-          id="combobox-input"
-          type="text"
-          className={inputClasses}
-          value={selectedValue ? selectedValue : ''}
-          placeholder={selectedValue ? '' : placeholder}
-          readOnly
-          disabled={disabled}
-          ref={inputRef}
-          onKeyDown={handleKeyDown}
-          onClick={handleToggleDropdown}
-          aria-haspopup="listbox"
-          aria-expanded={isOpen}
-          aria-controls="combobox-options"
-          aria-activedescendant={focusedOptionIndex}
-          role="combobox"
-          autoComplete="off"
-        />
-        {selectedValue && (
+    <div className={styles.combobox}>
+      <div className={`${styles.comboboxWrapper} ${disabled ? styles.disabled : ''}`} ref={comboboxRef} {...props}>
+        {label && (
+          <label htmlFor="combobox-input" className={styles.label}>
+            {label}
+          </label>
+        )}
+        <div className={styles.inputContainer}>
+          <input
+            id="combobox-input"
+            type="text"
+            className={inputClasses}
+            value={selectedValue ? selectedValue : ''}
+            placeholder={selectedValue ? '' : placeholder}
+            readOnly
+            disabled={disabled}
+            ref={inputRef}
+            onKeyDown={handleKeyDown}
+            onClick={handleToggleDropdown}
+            aria-haspopup="listbox"
+            aria-expanded={isOpen}
+            aria-controls="combobox-options"
+            aria-activedescendant={focusedOptionIndex}
+            role="combobox"
+            autoComplete="off"
+          />
+          {selectedValue && (
+            <button
+              type="button"
+              className={styles.clearButton}
+              onClick={handleClearSelection}
+              aria-label="Clear selection"
+            >
+              x
+            </button>
+          )}
           <button
             type="button"
-            className={styles.clearButton}
-            onClick={handleClearSelection}
-            aria-label="Clear selection"
+            className={`${styles.dropdownButton} ${isOpen ? styles.dropdownButtonOpen : ''}`}
+            onClick={handleToggleDropdown}
+            aria-label="Toggle dropdown"
           >
-            x
+            <span className={styles.dropdownArrow}>&#9660;</span>
           </button>
+        </div>
+
+        {/* Conditional rendering for helpText: only show if not open */}
+        {helpText && !isOpen && <div className={styles.helpText}>{helpText}</div>}
+
+        {isOpen && (
+          <ul className={styles.dropdownList} role="listbox" id="combobox-options" ref={optionsListRef}>
+            {options.map((option, index) => (
+              <li
+                key={option.value || option.label || index}
+                className={`${styles.dropdownOption} ${focusedOptionIndex === index ? styles.dropdownOptionFocused : ''}`}
+                onClick={() => handleOptionClick(option.label)}
+                role="option"
+                aria-selected={selectedValue === option.label}
+                tabIndex={-1} // Makes options focusable but not part of tab flow
+              >
+                {option.label}
+              </li>
+            ))}
+          </ul>
         )}
-        <button
-          type="button"
-          className={`${styles.dropdownButton} ${isOpen ? styles.dropdownButtonOpen : ''}`}
-          onClick={handleToggleDropdown}
-          aria-label="Toggle dropdown"
-        >
-          <span className={styles.dropdownArrow}>&#9660;</span>
-        </button>
       </div>
-
-      {/* Conditional rendering for helpText: only show if not open */}
-      {helpText && !isOpen && <div className={styles.helpText}>{helpText}</div>}
-
-      {isOpen && (
-        <ul className={styles.dropdownList} role="listbox" id="combobox-options" ref={optionsListRef}>
-          {options.map((option, index) => (
-            <li
-              key={option.value || option.label || index}
-              className={`${styles.dropdownOption} ${focusedOptionIndex === index ? styles.dropdownOptionFocused : ''}`}
-              onClick={() => handleOptionClick(option.label)}
-              role="option"
-              aria-selected={selectedValue === option.label}
-              tabIndex={-1} // Makes options focusable but not part of tab flow
-            >
-              {option.label}
-            </li>
-          ))}
-        </ul>
-      )}
     </div>
   );
 };
