@@ -2,8 +2,8 @@ import { ScrollytellingStory } from '../ScrollytellingStory/ScrollytellingStory'
 
 const stepData = [
   {
-    heading: 'DOCUMENTATION (Pinch)',
-    paragraph: `Technical architecture diagrams showcasing system design and state management patterns for the Pinch recipe management application.`,
+    heading: 'DOCUMENTATION',
+    paragraph: `Technical diagrams documenting frontend architecture, component interactions, and state management patterns for the Pinch recipe management application.`,
     background: '#f1f1f1',
     darkmode: false,
     imageUrl: null,
