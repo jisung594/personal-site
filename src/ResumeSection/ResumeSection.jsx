@@ -12,14 +12,12 @@ export const ResumeSection = () => {
           <p className={styles.resumeDescription}>Choose your preferred format:</p>
           <div className={styles.resumeDownloads}>
             <MyButton 
-              primary
-              label="PDF"
+              primary 
+              label="PDF" 
               href="/resume/jonathan-choi-resume.pdf" 
-            />
-            
-            <MyButton
-              label="ATS"
-              href="/resume/jonathan-choi-resume-ats.docx"
+              target="_blank" 
+              rel="noopener noreferrer"
+              download 
             />
           </div>
         </div>

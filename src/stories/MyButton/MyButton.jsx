@@ -25,14 +25,22 @@ export const MyButton = ({
   </button>
 );
 
+
   // If href is provided, wrap in appropriate element for navigation
   if (href) {
     // Check if href is external URL
-    const isExternal = href.startsWith('http') || href.startsWith('//');
+    const isFile = /\.(pdf|docx|zip|png|jpe?g|svg|txt)(\?.*)?$/i.test(href);
+    const isExternal = href.startsWith('http') || href.startsWith('//') || isFile || props.download;
     
     if (isExternal) {
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className={styles.linkWrapper}>
+        <a
+          href={href}
+          target={props.target || "_blank"}
+          rel={props.rel || "noopener noreferrer"}
+          download={props.download}
+          className={styles.linkWrapper}
+        >
           {ButtonElement}
         </a>
       );
