@@ -3,7 +3,7 @@ import { ScrollytellingStory } from '../ScrollytellingStory/ScrollytellingStory'
 const stepData = [
   {
     heading: 'JONATHAN CHOI',
-    paragraph: `Design engineer with a focus on building efficient, maintainable systems. 
+    paragraph: `Design-forward engineer with a focus on building efficient, maintainable systems. 
       I optimize performance and craft clean interfaces that deliver intuitive user experiences.`,
     background: '#f1f1f1',
     darkmode: false,

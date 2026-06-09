@@ -7,7 +7,7 @@ export const About = ({ ...props }) => {
       <div className={styles.generalInfo}>
         <h1 className={styles.generalTitle}>BIO</h1>
         <p className={styles.bio}>
-          Design engineer with a focus on building efficient, maintainable frontend systems. 
+          Design-forward engineer with a focus on building efficient, maintainable frontend systems. 
           I bridge design and engineering to create performant interfaces that deliver intuitive user experiences.
         </p>
         <div className={styles.location}>
