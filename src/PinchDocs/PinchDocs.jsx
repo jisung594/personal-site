@@ -8,8 +8,25 @@ const stepData = [
     darkmode: false,
     imageUrl: null,
   },
+
   {
-    heading: 'FEATURE: Theme Selector (WIP)',
+    heading: 'FEATURE: Image Upload (WIP)',
+    paragraph: `Proposed system architecture mapping the interactions between the frontend, Firebase Storage, and Cloud Functions for the upcoming image upload feature.`,
+    images: [
+      {
+        src: '/images/docs/image-upload-flowchart.png',
+        alt: 'Image upload flowchart illustrating the process of uploading an image to Firebase Storage and associating it with a recipe in Firestore.',
+        caption: 'Image upload.'
+      }
+    ],
+    background: '#f1f1f1',
+    darkmode: false,
+    imageUrl: null,
+  },
+
+
+  {
+    heading: 'FEATURE: Theme Selector',
     paragraph: `Illustrates the theme selection flow for a signed-in user. The Actor opens the ThemePaletteModal and selects a color, and HeaderComponent delegates the action to UIFacade. ThemeService immediately applies the selection as a CSS variable for preview, then UserFacade persists the chosen color to the user's Firestore profile. The Actor receives confirmation once the save is complete.`,
     images: [
       {
