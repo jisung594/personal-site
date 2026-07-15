@@ -10,11 +10,13 @@ const stepData = [
     imageUrl: null,
   },
   {
-    caption: `I work across different development ecosystems, adapting to each project's needs. Recent projects include:`,
-    paragraph: '',
-    background: '#f1f1f1',
-    darkmode: false,
-    imageUrl: null,
+    caption: `Following a corporate restructuring that eliminated my previous position, I dedicated this transition period to focus on 
+      technical growth. Since then, I've been building and maintaining a recipe management application to further apply core 
+      software engineering principles, such as component architecture and automated design token pipelines, in my personal work.`,
+      paragraph: '',
+      background: '#f1f1f1',
+      darkmode: false,
+      imageUrl: null,
   },
   {
     logo: {
@@ -22,7 +24,10 @@ const stepData = [
       alt: "Pinch Recipe Management App",
       variant: "above-heading"
     },
-    paragraph: `A recipe management application built with Angular 20, TypeScript, and Firebase. Features secure authentication, real-time Firestore database, and advanced search functionality. Applies reactive forms, RxJS, and component architecture while maintaining a mobile-first design optimized for kitchen workflow efficiency.`,
+    paragraph: `A serverless recipe management application built with Angular, TypeScript, and Tailwind CSS, deployed globally 
+      via Cloudflare Assets. Features a real-time Firestore database, secure user authentication, and advanced search functionality. 
+      Leverages client-side routing optimized at the network edge to deliver instant page loads, while utilizing reactive forms, RxJS, 
+      and a mobile-first design tailored for kitchen workflow efficiency.`,
     links: [
       { primary: true, label: "DEMO", href: 'https://pinchthis.com/login' },
       { primary: true, label: "DOCS", href: '/docs/pinch' }
